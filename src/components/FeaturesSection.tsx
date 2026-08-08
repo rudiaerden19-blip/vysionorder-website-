@@ -24,7 +24,7 @@ const features = [
   },
   {
     title: 'Koppeling kassa',
-    body: 'Koppel het online systeem aan je eigen kassa: bestellingen, bonnen en status in één flow. Optioneel met TableVysion reserveringen onder één Vysion-account.',
+    body: 'Koppel het online bestelplatform aan je eigen kassa: online orders, bonnen en status in één flow — onafhankelijk van je huidige kassaleverancier.',
   },
 ] as const
 
