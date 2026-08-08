@@ -20,11 +20,11 @@ const features = [
   },
   {
     title: 'Meertalig',
-    body: 'Gasten bestellen in hun taal; het platform ondersteunt dezelfde talen als Vysion kassa.',
+    body: 'Gasten bestellen in 9 talen — hetzelfde aanbod als op Vysion kassa, automatisch in de taal van je klant.',
   },
   {
     title: 'Koppeling kassa',
-    body: 'Optioneel samen met Vysion kassa en TableVysion reserveringen — alles onder één Vysion-account.',
+    body: 'Koppel het online systeem aan je eigen kassa: bestellingen, bonnen en status in één flow. Optioneel met TableVysion reserveringen onder één Vysion-account.',
   },
 ] as const
 
