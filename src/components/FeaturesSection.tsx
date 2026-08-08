@@ -12,7 +12,7 @@ const features = [
   },
   {
     title: 'Eigen website',
-    body: 'Gratis webshop in jouw huisstijl: logo, kleuren en domein via je tenant — geen losse Shopify nodig.',
+    body: 'Gratis website in jouw huisstijl, kleuren en eigen domein. Heb je al een site? Integreer de bestelknop op jouw website.',
   },
   {
     title: 'Geen commissie',
