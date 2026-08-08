@@ -1,6 +1,6 @@
 'use client'
 
-import { VYSION_BRAND_SITE_NAME } from '@/lib/vysion-site'
+import { VYSION_BRAND_SITE_NAME, vysionKassaUrl } from '@/lib/vysion-site'
 import { useLanguage } from '@/i18n'
 import BackToTopBar from '@/components/BackToTopBar'
 
@@ -93,7 +93,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="/over-ons"
+                    href={vysionKassaUrl('/over-ons')}
                     title={t('footer.aboutLinkTitle')}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
@@ -111,7 +111,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/support"
+                    href={vysionKassaUrl('/support')}
                     title={t('footer.supportLinkTitle')}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
@@ -120,7 +120,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/privacy"
+                    href={vysionKassaUrl('/privacy')}
                     title={t('footer.privacyLinkTitle')}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
@@ -129,7 +129,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/juridisch"
+                    href={vysionKassaUrl('/juridisch')}
                     title={t('footer.legalLinkTitle')}
                     className="text-gray-400 hover:text-white transition-colors"
                   >

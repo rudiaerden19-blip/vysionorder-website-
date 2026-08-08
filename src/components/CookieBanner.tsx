@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useLanguage } from '@/i18n'
+import { vysionKassaUrl } from '@/lib/vysion-site'
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false)
@@ -32,7 +33,7 @@ export default function CookieBanner() {
         <div className="flex-1">
           <p className="text-sm md:text-base">
              {t('cookies.message')}{' '}
-            <a href="/juridisch/cookies" className="text-accent hover:underline">{t('cookies.policy')}</a>.
+            <a href={vysionKassaUrl('/juridisch/cookies')} className="text-accent hover:underline">{t('cookies.policy')}</a>.
           </p>
         </div>
         <div className="flex gap-3">
