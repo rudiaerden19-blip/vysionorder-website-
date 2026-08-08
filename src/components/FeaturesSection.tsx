@@ -48,7 +48,7 @@ export default function FeaturesSection() {
           <p className="mb-4 text-lg font-bold uppercase tracking-[0.12em] text-accent sm:text-xl">Functies</p>
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Wat je krijgt</h2>
           <p className="mt-5 text-lg leading-relaxed text-gray-600">
-            Eén platform voor online bestellen — helder voor gasten, overzichtelijk voor jouw team.
+            Wij hebben aan talrijke horecazaken al bewezen: 30% meer bestellingen en omzet, zonder gedoe.
           </p>
         </header>
 
