@@ -1,4 +1,4 @@
-import { REGISTER_URL } from '@/lib/site'
+import { DEMO_LIVE_URL, REGISTER_URL } from '@/lib/site'
 
 const services = [
   'Wij starten je volledige online platform op.',
@@ -39,12 +39,22 @@ export default function PromoInstallSection() {
             <p className="text-sm font-medium text-gray-500">Eenmalige installatie</p>
             <p className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">€0</p>
             <p className="mt-3 text-sm leading-relaxed text-gray-600">Geen setup-factuur bij start.</p>
-            <a
-              href={REGISTER_URL}
-              className="mt-6 inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/90 sm:text-base"
-            >
-              Start gratis proefperiode
-            </a>
+            <div className="mt-6 flex w-full flex-col gap-3">
+              <a
+                href={REGISTER_URL}
+                className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/90 sm:text-base"
+              >
+                Start gratis proefperiode
+              </a>
+              <a
+                href={DEMO_LIVE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/90 sm:text-base"
+              >
+                Probeer het live
+              </a>
+            </div>
           </div>
         </div>
       </div>
