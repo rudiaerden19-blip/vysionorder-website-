@@ -20,7 +20,7 @@ const features = [
   },
   {
     title: 'Meertalig',
-    body: 'Gasten bestellen in 9 talen — hetzelfde aanbod als op Vysion kassa, automatisch in de taal van je klant.',
+    body: 'Gasten bestellen in 9 talen — menu en checkout automatisch in de taal van je klant, zonder aparte vertalingen.',
   },
   {
     title: 'Koppeling kassa',
