@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="mx-auto max-w-3xl text-center text-3xl font-bold leading-tight tracking-tight text-gray-900 sm:text-4xl lg:text-[2.35rem]">
-          Geschikt voor elke horecaonderneming!
+          Wat onze klanten zeggen
         </h2>
 
         <ul className="mt-14 grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-8 lg:gap-10">
