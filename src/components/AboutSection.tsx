@@ -112,7 +112,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="hidden lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(22rem,36rem)_minmax(0,1fr)] lg:grid-rows-2 lg:items-center lg:gap-x-6 lg:gap-y-16 xl:gap-x-8">
+          <div className="hidden lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(19rem,30rem)_minmax(0,1fr)] lg:grid-rows-2 lg:items-center lg:gap-x-8 lg:gap-y-16 xl:gap-x-10">
             <div className="col-start-1 row-start-1 justify-self-end">
               <FeatureBlock item={leftFeatures[0]} align="right" />
             </div>
