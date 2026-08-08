@@ -4,7 +4,6 @@ import AboutSection from '@/components/AboutSection'
 import FeaturesSection from '@/components/FeaturesSection'
 import MissionSection from '@/components/MissionSection'
 import WhySection from '@/components/WhySection'
-import PlatformShowcaseSection from '@/components/PlatformShowcaseSection'
 import PricingSection from '@/components/PricingSection'
 import MobileOrderingSection from '@/components/MobileOrderingSection'
 import FaqSection from '@/components/FaqSection'
@@ -19,7 +18,6 @@ export default function Home() {
         <AboutSection />
         <FeaturesSection />
         <MissionSection />
-        <PlatformShowcaseSection />
         <WhySection />
         <PricingSection />
         <MobileOrderingSection />
