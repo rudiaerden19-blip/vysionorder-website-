@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { SITE_NAME } from '@/lib/site'
 
 const SLIDES = [
@@ -13,7 +13,11 @@ const SLIDES = [
   { src: '/images/about-phone/slide-5.png', alt: 'Bestelling ontvangen bevestiging' },
 ] as const
 
-const SLIDE_MS = 2000
+const SLIDE_MS = 3000
+const FADE_MS = 500
+
+const phoneImageClass =
+  'mx-auto h-auto w-full max-w-[min(100%,16.5rem)] [filter:drop-shadow(0_26px_44px_rgba(0,0,0,0.23))] sm:max-w-[18rem] md:max-w-[19.5rem] lg:max-w-[22rem] xl:max-w-[24rem] 2xl:max-w-[25rem] transition-opacity duration-500 ease-in-out'
 
 function NavArrow({
   direction,
@@ -46,33 +50,52 @@ function NavArrow({
 
 export default function AboutPhoneSlider({ className = '' }: { className?: string }) {
   const [index, setIndex] = useState(0)
+  const [visible, setVisible] = useState(true)
+  const fadeTimeoutRef = useRef<number | null>(null)
   const total = SLIDES.length
   const slide = SLIDES[index]
 
-  const goPrev = useCallback(() => {
-    setIndex((i) => (i - 1 + total) % total)
-  }, [total])
+  const clearFadeTimeout = useCallback(() => {
+    if (fadeTimeoutRef.current !== null) {
+      window.clearTimeout(fadeTimeoutRef.current)
+      fadeTimeoutRef.current = null
+    }
+  }, [])
 
-  const goNext = useCallback(() => {
-    setIndex((i) => (i + 1) % total)
-  }, [total])
+  const advance = useCallback(
+    (delta: number) => {
+      clearFadeTimeout()
+      setVisible(false)
+      fadeTimeoutRef.current = window.setTimeout(() => {
+        setIndex((i) => (i + delta + total) % total)
+        setVisible(true)
+        fadeTimeoutRef.current = null
+      }, FADE_MS)
+    },
+    [clearFadeTimeout, total],
+  )
+
+  const goPrev = useCallback(() => advance(-1), [advance])
+  const goNext = useCallback(() => advance(1), [advance])
 
   useEffect(() => {
     const id = window.setInterval(goNext, SLIDE_MS)
-    return () => window.clearInterval(id)
-  }, [goNext])
+    return () => {
+      window.clearInterval(id)
+      clearFadeTimeout()
+    }
+  }, [goNext, clearFadeTimeout])
 
   return (
     <div className={`flex w-full max-w-[min(100%,30rem)] items-center justify-center gap-1.5 sm:gap-2 ${className}`}>
       <NavArrow direction="prev" onClick={goPrev} label="Vorige telefoonafbeelding" />
       <div className="relative min-w-0 flex-1">
         <Image
-          key={slide.src}
           src={slide.src}
           alt={slide.alt}
           width={464}
           height={912}
-          className="mx-auto h-auto w-full max-w-[min(100%,16.5rem)] [filter:drop-shadow(0_26px_44px_rgba(0,0,0,0.23))] sm:max-w-[18rem] md:max-w-[19.5rem] lg:max-w-[22rem] xl:max-w-[24rem] 2xl:max-w-[25rem]"
+          className={`${phoneImageClass} ${visible ? 'opacity-100' : 'opacity-0'}`}
           sizes="(max-width: 639px) 264px, (max-width: 1023px) 312px, 384px"
           priority={index === 0}
         />
