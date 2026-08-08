@@ -22,9 +22,6 @@ export default function LandingHero() {
         <h1 className="max-w-4xl text-3xl sm:text-4xl md:text-5xl lg:text-[2.85rem] font-bold leading-tight tracking-tight text-accent">
           Meer online bestellingen. Minder gedoe.
         </h1>
-        <p className="mt-4 sm:mt-5 text-lg sm:text-xl text-white/90 font-medium max-w-2xl leading-snug">
-          30% meer bestellingen
-        </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
