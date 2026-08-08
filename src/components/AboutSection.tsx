@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import type { ReactNode } from 'react'
+import AboutPhoneSlider from '@/components/AboutPhoneSlider'
 import { REGISTER_URL, SITE_NAME } from '@/lib/site'
 
 type FeatureItem = {
@@ -83,21 +83,6 @@ function FeatureBlock({ item, align }: { item: FeatureItem; align: 'left' | 'rig
   )
 }
 
-const PHONE_MOCKUP = '/images/about-phone-mockup.png'
-
-function PhoneMockup({ className = '' }: { className?: string }) {
-  return (
-    <Image
-      src={PHONE_MOCKUP}
-      alt={`${SITE_NAME} menu op smartphone`}
-      width={464}
-      height={912}
-      className={`mx-auto h-auto w-full max-w-[min(100%,20rem)] [filter:drop-shadow(0_24px_40px_rgba(0,0,0,0.22))] sm:max-w-[19rem] lg:max-w-[20rem] xl:max-w-[22rem] ${className}`}
-      sizes="(max-width: 1023px) 320px, 352px"
-    />
-  )
-}
-
 export default function AboutSection() {
   return (
     <section
@@ -119,7 +104,7 @@ export default function AboutSection() {
 
         <div className="mt-14 lg:mt-16">
           <div className="flex flex-col items-center gap-12 lg:hidden">
-            <PhoneMockup />
+            <AboutPhoneSlider />
             <div className="flex w-full max-w-lg flex-col gap-12">
               {[...leftFeatures, ...rightFeatures].map((item) => (
                 <FeatureBlock key={item.title} item={item} align="left" />
@@ -135,7 +120,7 @@ export default function AboutSection() {
               <FeatureBlock item={rightFeatures[0]} align="left" />
             </div>
             <div className="col-start-2 row-span-2 row-start-1 flex items-center justify-center px-2">
-              <PhoneMockup className="lg:max-w-none xl:max-w-[22rem]" />
+              <AboutPhoneSlider className="lg:max-w-none xl:max-w-[28rem]" />
             </div>
             <div className="col-start-1 row-start-2 justify-self-end">
               <FeatureBlock item={leftFeatures[1]} align="right" />
