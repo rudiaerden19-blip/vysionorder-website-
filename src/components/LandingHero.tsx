@@ -6,6 +6,10 @@ import { DEMO_LIVE_URL, REGISTER_URL } from '@/lib/site'
 
 const HERO_IMAGE = '/images/hero-vysion-order-header.jpg'
 
+/** Alleen hero-CTA's — rest van site gebruikt `--accent` (platform blauw). */
+const HERO_ORANGE_BTN =
+  'bg-[#e85a3c] hover:bg-[#e85a3c]/90'
+
 export default function LandingHero() {
   return (
     <section className="relative flex min-h-[min(100svh,920px)] w-full flex-col overflow-hidden pb-8 pt-20 text-white sm:min-h-[82svh]">
@@ -29,7 +33,7 @@ export default function LandingHero() {
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
             href={REGISTER_URL}
-            className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-accent px-8 py-3 text-base font-semibold text-white shadow-home-btn transition-colors hover:bg-accent/90"
+            className={`inline-flex min-h-[48px] items-center justify-center rounded-full px-8 py-3 text-base font-semibold text-white shadow-home-btn transition-colors ${HERO_ORANGE_BTN}`}
           >
             Start gratis proefperiode
           </a>
@@ -47,7 +51,7 @@ export default function LandingHero() {
           href={DEMO_LIVE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-[2cm] inline-flex min-h-[48px] items-center justify-center rounded-full bg-accent px-8 py-3 text-base font-semibold text-white shadow-home-btn transition-colors hover:bg-accent/90"
+          className={`mt-[2cm] inline-flex min-h-[48px] items-center justify-center rounded-full px-8 py-3 text-base font-semibold text-white shadow-home-btn transition-colors ${HERO_ORANGE_BTN}`}
         >
           Probeer het live
         </a>
