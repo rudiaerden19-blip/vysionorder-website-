@@ -22,6 +22,12 @@ body {
 }
 
 @layer utilities {
+  .text-brand {
+    color: var(--accent);
+  }
+  .section-heading {
+    color: var(--accent);
+  }
   .shadow-home-btn {
     box-shadow:
       0 22px 48px -10px rgba(0, 0, 0, 0.28),

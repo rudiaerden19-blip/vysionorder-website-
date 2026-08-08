@@ -7,15 +7,24 @@ const HERO_IMAGE = '/images/hero-vysion-order-v2.jpg'
 
 export default function LandingHero() {
   return (
-    <section className="relative flex min-h-[min(100svh,920px)] flex-col overflow-hidden pb-8 pt-20 text-white sm:min-h-[82svh]">
-      <div className="absolute inset-x-0 bottom-0 top-[-5rem] bg-[#1c1512]" aria-hidden />
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={HERO_IMAGE}
-        alt="Terras van een horecazaak — online bestellen bij Vysion Order"
-        className="absolute inset-x-0 bottom-0 top-[-5rem] h-full w-full object-cover object-center"
-      />
-      <div className="absolute inset-x-0 bottom-0 top-[-5rem] bg-black/35" aria-hidden />
+    <section className="relative flex min-h-[min(100svh,920px)] w-full flex-col overflow-hidden pb-8 pt-20 text-white sm:min-h-[82svh]">
+      <div className="absolute inset-x-0 bottom-0 top-[-5rem] overflow-hidden bg-[#1c1512]">
+        {/* Vult de breedte; scherpe foto blijft contain (portrait) */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={HERO_IMAGE}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 h-full w-full scale-110 object-cover object-center blur-2xl brightness-[0.55]"
+        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={HERO_IMAGE}
+          alt="Terras van een horecazaak — online bestellen bij Vysion Order"
+          className="relative z-[1] h-full w-full object-contain object-center"
+        />
+        <div className="absolute inset-0 z-[2] bg-black/30" aria-hidden />
+      </div>
 
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 py-8 text-center sm:px-6">
         <h1 className="max-w-4xl text-3xl font-bold leading-tight tracking-tight text-accent drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:text-4xl md:text-5xl lg:text-[2.85rem]">
@@ -36,7 +45,7 @@ export default function LandingHero() {
             Bekijk functies
           </Link>
         </div>
-        <p className="mt-[2cm] max-w-2xl text-base font-semibold leading-snug text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] sm:text-lg md:text-xl">
+        <p className="mt-7 max-w-2xl text-base font-semibold leading-snug text-accent drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)] sm:mt-8 sm:text-lg md:text-xl">
           Het meest professionele online bestelsysteem op de markt — zonder transactiekosten
         </p>
       </div>

@@ -17,7 +17,7 @@ export default function MobileOrderingSection() {
           />
         </div>
         <div className="text-center lg:text-left">
-          <h2 className="text-3xl font-bold leading-tight tracking-tight text-accent sm:text-4xl lg:text-[2.35rem]">
+          <h2 className="section-heading text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.35rem]">
             Beheer bestellingen overal waar je bent.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-gray-600 sm:text-xl">

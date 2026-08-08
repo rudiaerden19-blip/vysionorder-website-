@@ -39,7 +39,7 @@ export default function FaqSection() {
   return (
     <section id="faq" className="scroll-mt-24 border-t border-gray-200 bg-white py-16 sm:py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
-        <h2 className="mb-10 text-center text-2xl font-bold text-accent sm:text-3xl">
+        <h2 className="section-heading mb-10 text-center text-2xl font-bold sm:text-3xl">
           Veelgestelde vragen
         </h2>
         <dl className="space-y-8">

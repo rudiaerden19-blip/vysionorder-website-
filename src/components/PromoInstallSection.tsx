@@ -19,7 +19,7 @@ export default function PromoInstallSection() {
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-accent sm:text-base">
             Gratis installatie
           </p>
-          <h2 className="text-3xl font-bold tracking-tight text-accent sm:text-4xl">Wat doen wij?</h2>
+          <h2 className="section-heading text-3xl font-bold tracking-tight sm:text-4xl">Wat doen wij?</h2>
           <p className="mt-4 text-lg leading-relaxed text-gray-600">
             Wij zetten je online bestelplatform klaar — menu, betalingen, website en vindbaarheid. Installatie{' '}
             <span className="font-semibold text-gray-900">€0</span>.

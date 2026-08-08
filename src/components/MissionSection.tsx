@@ -38,7 +38,7 @@ export default function MissionSection() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 text-center sm:mb-12">
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-accent sm:text-base">Alles in één pakket</p>
-          <h2 className="text-3xl font-bold text-white drop-shadow-sm sm:text-4xl">Wat is inbegrepen</h2>
+          <h2 className="section-heading text-3xl font-bold drop-shadow-sm sm:text-4xl">Wat is inbegrepen</h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-gray-200">
             Eén online bestelplatform met alles wat je zaak nodig heeft — zonder losse modules bijkopen.
           </p>
