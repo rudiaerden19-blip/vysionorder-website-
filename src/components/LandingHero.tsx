@@ -9,14 +9,12 @@ export default function LandingHero() {
   return (
     <section className="relative flex min-h-[min(100svh,920px)] flex-col overflow-hidden pb-8 pt-20 text-white sm:min-h-[82svh]">
       <div className="absolute inset-x-0 bottom-0 top-[-5rem] bg-[#1c1512]" aria-hidden />
-      <div className="absolute inset-x-0 bottom-0 top-[-5rem] flex items-center justify-center">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={HERO_IMAGE}
-          alt="Terras van een horecazaak — online bestellen bij Vysion Order"
-          className="h-full w-full object-contain object-center"
-        />
-      </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={HERO_IMAGE}
+        alt="Terras van een horecazaak — online bestellen bij Vysion Order"
+        className="absolute inset-x-0 bottom-0 top-[-5rem] h-full w-full object-cover object-center"
+      />
       <div className="absolute inset-x-0 bottom-0 top-[-5rem] bg-black/35" aria-hidden />
 
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 py-8 text-center sm:px-6">
