@@ -18,12 +18,12 @@ export default function Home() {
         <LandingHero />
         <AboutSection />
         <FeaturesSection />
-        <TestimonialsSection />
         <MissionSection />
         <PromoInstallSection />
         <PricingSection />
         <MobileOrderingSection />
         <FaqSection />
+        <TestimonialsSection />
       </main>
       <SiteFooter />
     </>
