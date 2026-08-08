@@ -55,10 +55,10 @@ export default function FeaturesSection() {
         </header>
 
         <div className="features-layout-split grid w-full grid-cols-1 items-start gap-y-10 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-0 md:gap-x-12 lg:gap-x-16 xl:gap-x-20">
-          <div className="features-photo relative aspect-[4/3] min-h-[17rem] min-w-0 w-full overflow-hidden rounded-3xl shadow-home-photo ring-1 ring-black/5 sm:aspect-auto sm:min-h-0">
+          <div className="features-photo relative aspect-[4/5] min-h-[17rem] min-w-0 w-full overflow-hidden rounded-3xl shadow-home-photo ring-1 ring-black/5 sm:min-h-[20rem] lg:aspect-[3/4]">
             <Image
-              src="/images/platform/bestelplatform-hero.jpg"
-              alt="Online bestelplatform op laptop en smartphone"
+              src="/images/features-section-horeca.jpg"
+              alt="Horeca bediening met online bestellingen op het platform"
               fill
               className="object-cover object-center"
               sizes="(max-width: 639px) 100vw, 42vw"
