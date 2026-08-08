@@ -22,7 +22,7 @@ export default function MobileOrderingSection() {
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-gray-600 sm:text-xl">
             In de zaak, op het terras of thuis: open je admin op telefoon, tablet of laptop en volg online orders,
-            status en omzet — waar je ook bent.
+            status en omzet — waar je ook bent. Pas je website aan waar je ook bent, zolang je internet hebt.
           </p>
         </div>
       </div>
