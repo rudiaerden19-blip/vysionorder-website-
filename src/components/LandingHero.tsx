@@ -4,8 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { REGISTER_URL } from '@/lib/site'
 
-/** Landscape crop van terrasfoto — full-bleed zonder zijbalken */
-const HERO_IMAGE = '/images/hero-vysion-order-hero-wide.jpg'
+const HERO_IMAGE = '/images/hero-vysion-order-header.jpg'
 
 export default function LandingHero() {
   return (
@@ -13,7 +12,7 @@ export default function LandingHero() {
       <div className="absolute inset-x-0 bottom-0 top-[-5rem]">
         <Image
           src={HERO_IMAGE}
-          alt="Terras van een horecazaak — online bestellen bij Vysion Order"
+          alt="Restaurantzaal met gedekte tafels — online bestellen met Vysion Order"
           fill
           priority
           sizes="100vw"
