@@ -44,7 +44,7 @@ const jsonLd = {
       '@id': `${siteUrl}/#website`,
       url: siteUrl,
       name: SITE_NAME,
-      description: 'Online bestellen voor horeca — webshop en afhaal in één platform.',
+      description: 'Online bestellen voor horeca, webshop en afhaal in één platform.',
       publisher: { '@id': `${siteUrl}/#organization` },
       inLanguage: 'nl-BE',
     },

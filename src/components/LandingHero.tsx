@@ -16,7 +16,7 @@ export default function LandingHero() {
       <div className="absolute inset-x-0 bottom-0 top-[-5rem]">
         <Image
           src={HERO_IMAGE}
-          alt="Restaurantzaal met gedekte tafels — online bestellen met Vysion Order"
+          alt="Restaurantzaal met gedekte tafels, online bestellen met Vysion Order"
           fill
           priority
           sizes="100vw"
@@ -45,7 +45,7 @@ export default function LandingHero() {
           </Link>
         </div>
         <p className="mt-7 max-w-2xl text-base font-semibold leading-snug text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)] sm:mt-8 sm:text-lg md:text-xl">
-          Het meest professionele online bestelsysteem op de markt — zonder transactiekosten
+          Het meest professionele online bestelsysteem op de markt, zonder transactiekosten
         </p>
         <a
           href={DEMO_LIVE_URL}

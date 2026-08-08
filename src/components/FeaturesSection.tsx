@@ -4,7 +4,7 @@ import { REGISTER_URL } from '@/lib/site'
 const features = [
   {
     title: 'Webshop & afhalen',
-    body: 'Klanten bestellen online voor afhalen of levering — menu, tijdsloten en betaling in één flow.',
+    body: 'Klanten bestellen online voor afhalen of levering, menu, tijdsloten en betaling in één flow.',
   },
   {
     title: 'Admin & keuken',
@@ -20,11 +20,11 @@ const features = [
   },
   {
     title: 'Meertalig',
-    body: 'Gasten bestellen in 9 talen — menu en checkout automatisch in de taal van je klant, zonder aparte vertalingen.',
+    body: 'Gasten bestellen in 9 talen, menu en checkout automatisch in de taal van je klant, zonder aparte vertalingen.',
   },
   {
     title: 'Koppeling kassa',
-    body: 'Koppel het online bestelplatform aan je eigen kassa: online orders, bonnen en status in één flow — onafhankelijk van je huidige kassaleverancier.',
+    body: 'Koppel het online bestelplatform aan je eigen kassa: online orders, bonnen en status in één flow, onafhankelijk van je huidige kassaleverancier.',
   },
 ] as const
 
@@ -47,7 +47,7 @@ export default function FeaturesSection() {
         <header className="features-section-header mx-auto max-w-2xl text-center">
           <p className="mb-4 text-lg font-bold uppercase tracking-[0.12em] text-accent sm:text-xl">Functies</p>
           <h2 className="section-heading text-3xl font-bold tracking-tight sm:text-4xl">
-            Doe jij wat je graag doet: mensen verwennen met lekker eten — de rest doen wij.
+            Doe jij wat je graag doet: mensen verwennen met lekker eten, de rest doen wij.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-gray-600">
             Wij hebben aan talrijke horecazaken al bewezen: 30% meer bestellingen en omzet, zonder gedoe.

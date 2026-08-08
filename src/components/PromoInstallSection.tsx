@@ -21,7 +21,7 @@ export default function PromoInstallSection() {
           </p>
           <h2 className="section-heading text-3xl font-bold tracking-tight sm:text-4xl">Wat doen wij?</h2>
           <p className="mt-4 text-lg leading-relaxed text-gray-600">
-            Wij zetten je online bestelplatform klaar — menu, betalingen, website en vindbaarheid. Installatie{' '}
+            Wij zetten je online bestelplatform klaar, menu, betalingen, website en vindbaarheid. Installatie{' '}
             <span className="font-semibold text-gray-900">€0</span>.
           </p>
         </header>

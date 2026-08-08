@@ -13,7 +13,7 @@ const testimonials = [
   {
     tagline: '€49 per maand, €0 installatie',
     quote:
-      'Wij hadden bij een ander platform in de buurt prijzen opgevraagd: €119 per maand en €550 installatie. We contacteerden Vysion Order en hebben nu een platform dat zeer snel en feilloos werkt voor €49 per maand — zonder één euro installatiekosten.',
+      'Wij hadden bij een ander platform in de buurt prijzen opgevraagd: €119 per maand en €550 installatie. We contacteerden Vysion Order en hebben nu een platform dat zeer snel en feilloos werkt voor €49 per maand, zonder één euro installatiekosten.',
     name: 'Bar Lies',
     place: 'Opglabeek',
     photo: '/images/testimonials/bar-lies.jpg',
@@ -22,7 +22,7 @@ const testimonials = [
   {
     tagline: 'Alles aangepast naar onze wens',
     quote:
-      'Wij hebben al veel platformen getest en misten steeds een bepaalde module die we zelf graag wilden. Vysion gebeld — een paar dagen later was alles aangepast naar onze wens. Niet normaal, wat een service!',
+      'Wij hebben al veel platformen getest en misten steeds een bepaalde module die we zelf graag wilden. Vysion gebeld, een paar dagen later was alles aangepast naar onze wens. Niet normaal, wat een service!',
     name: 'Eethuis Blonkys',
     place: 'Dordrecht',
     photo: '/images/testimonials/blonkys-eethuis.jpg',
@@ -60,7 +60,7 @@ export default function TestimonialsSection() {
               <footer className="mt-6 text-base text-gray-900">
                 <cite className="not-italic">
                   <span className="font-bold">{item.name}</span>
-                  <span className="text-gray-600"> — {item.place}</span>
+                  <span className="text-gray-600">, {item.place}</span>
                 </cite>
               </footer>
             </li>

@@ -40,7 +40,7 @@ export default function MissionSection() {
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-accent sm:text-base">Alles in één pakket</p>
           <h2 className="section-heading text-3xl font-bold drop-shadow-sm sm:text-4xl">Wat is inbegrepen</h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-gray-200">
-            Eén online bestelplatform met alles wat je zaak nodig heeft — zonder losse modules bijkopen.
+            Eén online bestelplatform met alles wat je zaak nodig heeft, zonder losse modules bijkopen.
           </p>
         </div>
 

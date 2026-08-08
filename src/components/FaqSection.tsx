@@ -11,7 +11,7 @@ const FAQ = [
   },
   {
     q: 'Waar log ik in na registratie?',
-    a: `Via Inloggen op ${OFFICIAL_SITE_URL.replace('https://', '')} — je wordt doorgestuurd naar het platform met je tenant.`,
+    a: `Via Inloggen op ${OFFICIAL_SITE_URL.replace('https://', '')}, je wordt doorgestuurd naar het platform met je tenant.`,
   },
   {
     q: 'Kan ik mijn bestaande website koppelen?',
@@ -19,7 +19,7 @@ const FAQ = [
   },
   {
     q: 'Werkt dit voor meerdere zaken?',
-    a: 'Elke zaak heeft een eigen tenant — het platform is multi-tenant, geschikt voor vele locaties.',
+    a: 'Elke zaak heeft een eigen tenant, het platform is multi-tenant, geschikt voor vele locaties.',
   },
   {
     q: 'Moet ik installatiekosten betalen?',
@@ -31,7 +31,7 @@ const FAQ = [
   },
   {
     q: 'Hoe start ik?',
-    a: `Registreer via Start gratis — je gaat naar ${REGISTER_URL.includes('vysion-kassa') ? 'vysion-kassa.com' : 'het platform'} met productlijn online bestellen.`,
+    a: `Registreer via Start gratis, je gaat naar ${REGISTER_URL.includes('vysion-kassa') ? 'vysion-kassa.com' : 'het platform'} met productlijn online bestellen.`,
   },
 ] as const
 

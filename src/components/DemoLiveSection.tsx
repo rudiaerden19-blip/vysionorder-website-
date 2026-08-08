@@ -22,7 +22,7 @@ export default function DemoLiveSection() {
         >
           Bekijk live demo →
         </a>
-        <p className="mt-4 text-sm text-gray-500">Demo: bestel als gast — geen account nodig.</p>
+        <p className="mt-4 text-sm text-gray-500">Demo: bestel als gast, geen account nodig.</p>
       </div>
     </section>
   )

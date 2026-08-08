@@ -41,7 +41,7 @@ export default function SiteFooter() {
                 www.tablevysion.com
               </a>
               <a href={OFFICIAL_SITE_URL} className="font-medium text-accent hover:underline">
-                {SITE_NAME} — officiële website
+                {SITE_NAME}, officiële website
               </a>
               <a
                 href={WEBVYSION_SITE_URL}

@@ -11,7 +11,7 @@ type FeatureItem = {
 const leftFeatures: FeatureItem[] = [
   {
     title: 'Afhaal & levering',
-    body: 'Beheer afhaal- en leverbestellingen in één dashboard: tijdsloten, status en keukenscherm — zonder commissie per order.',
+    body: 'Beheer afhaal- en leverbestellingen in één dashboard: tijdsloten, status en keukenscherm, zonder commissie per order.',
     icon: (
       <path
         strokeLinecap="round"
@@ -48,7 +48,7 @@ const rightFeatures: FeatureItem[] = [
   },
   {
     title: 'Klantenkaart',
-    body: 'Sparen en stempels zitten standaard in het platform — geen apart loyalty-abonnement. Eenvoudig voor jou, leuk voor vaste klanten.',
+    body: 'Sparen en stempels zitten standaard in het platform, geen apart loyalty-abonnement. Eenvoudig voor jou, leuk voor vaste klanten.',
     icon: (
       <path
         strokeLinecap="round"
@@ -97,7 +97,7 @@ export default function AboutSection() {
           </h2>
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-accent" aria-hidden />
           <p className="mt-5 text-lg leading-relaxed text-gray-600">
-            {SITE_NAME} koppelt webshop, afhaal en levering aan je keuken en kassa — één flow voor elke zaak op het
+            {SITE_NAME} koppelt webshop, afhaal en levering aan je keuken en kassa, één flow voor elke zaak op het
             platform.
           </p>
         </header>
