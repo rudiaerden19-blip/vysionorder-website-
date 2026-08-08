@@ -1,29 +1,25 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { REGISTER_URL } from '@/lib/site'
 
-const HERO_IMAGE = '/images/hero-vysion-order-v2.jpg'
+/** Landscape crop van terrasfoto — full-bleed zonder zijbalken */
+const HERO_IMAGE = '/images/hero-vysion-order-hero-wide.jpg'
 
 export default function LandingHero() {
   return (
     <section className="relative flex min-h-[min(100svh,920px)] w-full flex-col overflow-hidden pb-8 pt-20 text-white sm:min-h-[82svh]">
-      <div className="absolute inset-x-0 bottom-0 top-[-5rem] overflow-hidden bg-[#1c1512]">
-        {/* Vult de breedte; scherpe foto blijft contain (portrait) */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={HERO_IMAGE}
-          alt=""
-          aria-hidden
-          className="absolute inset-0 h-full w-full scale-110 object-cover object-center blur-2xl brightness-[0.55]"
-        />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+      <div className="absolute inset-x-0 bottom-0 top-[-5rem]">
+        <Image
           src={HERO_IMAGE}
           alt="Terras van een horecazaak — online bestellen bij Vysion Order"
-          className="relative z-[1] h-full w-full object-contain object-center"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 z-[2] bg-black/30" aria-hidden />
+        <div className="absolute inset-0 bg-black/45" aria-hidden />
       </div>
 
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 py-8 text-center sm:px-6">
