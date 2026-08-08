@@ -22,7 +22,7 @@ export default function LandingHero() {
       </div>
 
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 py-8 text-center sm:px-6">
-        <h1 className="max-w-4xl text-3xl font-bold leading-tight tracking-tight text-accent drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:text-4xl md:text-5xl lg:text-[2.85rem]">
+        <h1 className="max-w-4xl text-3xl font-bold leading-tight tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:text-4xl md:text-5xl lg:text-[2.85rem]">
           Meer online bestellingen. Minder gedoe.
         </h1>
 
@@ -40,7 +40,7 @@ export default function LandingHero() {
             Bekijk functies
           </Link>
         </div>
-        <p className="mt-7 max-w-2xl text-base font-semibold leading-snug text-accent drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)] sm:mt-8 sm:text-lg md:text-xl">
+        <p className="mt-7 max-w-2xl text-base font-semibold leading-snug text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)] sm:mt-8 sm:text-lg md:text-xl">
           Het meest professionele online bestelsysteem op de markt — zonder transactiekosten
         </p>
       </div>
