@@ -90,9 +90,9 @@ function PhoneMockup({ className = '' }: { className?: string }) {
     <Image
       src={PHONE_MOCKUP}
       alt={`${SITE_NAME} menu op smartphone`}
-      width={576}
-      height={1024}
-      className={`mx-auto h-auto w-full max-w-[min(100%,20rem)] drop-shadow-[0_24px_48px_rgba(0,0,0,0.18)] sm:max-w-[19rem] lg:max-w-[20rem] xl:max-w-[22rem] ${className}`}
+      width={464}
+      height={912}
+      className={`mx-auto h-auto w-full max-w-[min(100%,20rem)] [filter:drop-shadow(0_24px_40px_rgba(0,0,0,0.22))] sm:max-w-[19rem] lg:max-w-[20rem] xl:max-w-[22rem] ${className}`}
       sizes="(max-width: 1023px) 320px, 352px"
     />
   )
