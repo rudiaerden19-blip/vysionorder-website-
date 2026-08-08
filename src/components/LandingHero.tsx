@@ -1,20 +1,19 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { REGISTER_URL } from '@/lib/site'
+
+const HERO_IMAGE = '/images/hero-vysion-order.jpg'
 
 export default function LandingHero() {
   return (
     <section className="relative pt-20 min-h-[72svh] sm:min-h-[76svh] flex flex-col text-white overflow-hidden pb-8">
       <div className="absolute inset-x-0 top-[-5rem] bottom-0">
-        <Image
-          src="/images/hero-header.png"
-          alt="Thuis afhaalmaaltijd uitpakken — online bestellen bij horeca"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${HERO_IMAGE})` }}
+          role="img"
+          aria-label="Thuis afhaalmaaltijd uitpakken — online bestellen bij horeca"
         />
         <div className="absolute inset-0 bg-black/60" aria-hidden />
       </div>
