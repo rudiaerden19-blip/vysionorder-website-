@@ -36,7 +36,6 @@ const jsonLd = {
       sameAs: [
         'https://www.vysion-kassa.com',
         'https://www.tablevysion.com',
-        'https://www.vysionapps.io',
         'https://www.webvysion.tech',
       ],
     },

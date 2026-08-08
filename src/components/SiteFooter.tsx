@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { MAIN_PLATFORM_URL, OFFICIAL_SITE_URL, SITE_NAME, TABLEVYSION_SITE_URL } from '@/lib/site'
+import { MAIN_PLATFORM_URL, OFFICIAL_SITE_URL, SITE_NAME, TABLEVYSION_SITE_URL, WEBVYSION_SITE_URL } from '@/lib/site'
 
 const footerLinkClass = 'text-gray-400 hover:text-white transition-colors'
 
@@ -44,12 +44,12 @@ export default function SiteFooter() {
                 {SITE_NAME} — officiële website
               </a>
               <a
-                href="https://www.vysionapps.io"
+                href={WEBVYSION_SITE_URL}
                 className="font-medium text-accent hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                www.vysionapps.io
+                www.webvysion.tech
               </a>
             </div>
           </div>

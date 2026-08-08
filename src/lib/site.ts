@@ -6,6 +6,8 @@ export const MAIN_PLATFORM_URL = 'https://www.vysion-kassa.com'
 
 export const TABLEVYSION_SITE_URL = 'https://www.tablevysion.com'
 
+export const WEBVYSION_SITE_URL = 'https://www.webvysion.tech'
+
 export const PRODUCT_LINE = 'online_bestellen' as const
 
 export const LOGIN_PATH = '/inloggen'
