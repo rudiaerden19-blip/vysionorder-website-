@@ -83,24 +83,18 @@ function FeatureBlock({ item, align }: { item: FeatureItem; align: 'left' | 'rig
   )
 }
 
-function PhoneMockup() {
+const PHONE_MOCKUP = '/images/about-phone-mockup.png'
+
+function PhoneMockup({ className = '' }: { className?: string }) {
   return (
-    <div className="relative mx-auto w-[min(100%,17.5rem)]">
-      <div
-        className="relative aspect-[9/19] overflow-hidden rounded-[2.25rem] border-[10px] border-dark bg-dark shadow-home-photo ring-1 ring-black/10"
-        aria-hidden
-      >
-        <div className="absolute left-1/2 top-0 z-10 h-6 w-28 -translate-x-1/2 rounded-b-2xl bg-dark" />
-        <Image
-          src="/images/online-order-platform-1.png"
-          alt={`${SITE_NAME} webshop op smartphone`}
-          fill
-          className="object-cover object-top"
-          sizes="280px"
-          priority={false}
-        />
-      </div>
-    </div>
+    <Image
+      src={PHONE_MOCKUP}
+      alt={`${SITE_NAME} menu op smartphone`}
+      width={576}
+      height={1024}
+      className={`mx-auto h-auto w-full max-w-[min(100%,20rem)] drop-shadow-[0_24px_48px_rgba(0,0,0,0.18)] sm:max-w-[19rem] lg:max-w-[20rem] xl:max-w-[22rem] ${className}`}
+      sizes="(max-width: 1023px) 320px, 352px"
+    />
   )
 }
 
@@ -124,21 +118,30 @@ export default function AboutSection() {
         </header>
 
         <div className="mt-14 lg:mt-16">
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto_1fr] lg:gap-x-10 xl:gap-x-14">
-            <div className="order-2 flex flex-col gap-12 lg:order-1 lg:gap-16 lg:justify-self-end">
-              {leftFeatures.map((item) => (
-                <FeatureBlock key={item.title} item={item} align="right" />
-              ))}
-            </div>
-
-            <div className="order-1 lg:order-2 lg:row-span-2">
-              <PhoneMockup />
-            </div>
-
-            <div className="order-3 flex flex-col gap-12 lg:gap-16 lg:justify-self-start">
-              {rightFeatures.map((item) => (
+          <div className="flex flex-col items-center gap-12 lg:hidden">
+            <PhoneMockup />
+            <div className="flex w-full max-w-lg flex-col gap-12">
+              {[...leftFeatures, ...rightFeatures].map((item) => (
                 <FeatureBlock key={item.title} item={item} align="left" />
               ))}
+            </div>
+          </div>
+
+          <div className="hidden lg:grid lg:grid-cols-[1fr_minmax(16rem,22rem)_1fr] lg:grid-rows-2 lg:items-center lg:gap-x-10 lg:gap-y-16 xl:gap-x-14">
+            <div className="col-start-1 row-start-1 justify-self-end">
+              <FeatureBlock item={leftFeatures[0]} align="right" />
+            </div>
+            <div className="col-start-3 row-start-1 justify-self-start">
+              <FeatureBlock item={rightFeatures[0]} align="left" />
+            </div>
+            <div className="col-start-2 row-span-2 row-start-1 flex items-center justify-center px-2">
+              <PhoneMockup className="lg:max-w-none xl:max-w-[22rem]" />
+            </div>
+            <div className="col-start-1 row-start-2 justify-self-end">
+              <FeatureBlock item={leftFeatures[1]} align="right" />
+            </div>
+            <div className="col-start-3 row-start-2 justify-self-start">
+              <FeatureBlock item={rightFeatures[1]} align="left" />
             </div>
           </div>
         </div>
