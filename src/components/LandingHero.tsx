@@ -10,7 +10,7 @@ export default function LandingHero() {
       <div className="absolute inset-x-0 top-[-5rem] bottom-0">
         <Image
           src="/images/hero-header.png"
-          alt="Horecazaak met online bestellingen en afhalen"
+          alt="Thuis afhaalmaaltijd uitpakken — online bestellen bij horeca"
           fill
           priority
           className="object-cover object-center"
