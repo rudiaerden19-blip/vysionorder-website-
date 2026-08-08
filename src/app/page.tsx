@@ -7,6 +7,7 @@ import MissionSection from '@/components/MissionSection'
 import PromoInstallSection from '@/components/PromoInstallSection'
 import PricingSection from '@/components/PricingSection'
 import MobileOrderingSection from '@/components/MobileOrderingSection'
+import DemoLiveSection from '@/components/DemoLiveSection'
 import FaqSection from '@/components/FaqSection'
 import SiteFooter from '@/components/SiteFooter'
 
@@ -22,6 +23,7 @@ export default function Home() {
         <PromoInstallSection />
         <PricingSection />
         <MobileOrderingSection />
+        <DemoLiveSection />
         <FaqSection />
         <TestimonialsSection />
       </main>
