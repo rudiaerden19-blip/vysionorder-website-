@@ -112,7 +112,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          <div className="hidden lg:grid lg:grid-cols-[1fr_minmax(16rem,22rem)_1fr] lg:grid-rows-2 lg:items-center lg:gap-x-10 lg:gap-y-16 xl:gap-x-14">
+          <div className="hidden lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(22rem,36rem)_minmax(0,1fr)] lg:grid-rows-2 lg:items-center lg:gap-x-6 lg:gap-y-16 xl:gap-x-8">
             <div className="col-start-1 row-start-1 justify-self-end">
               <FeatureBlock item={leftFeatures[0]} align="right" />
             </div>
@@ -120,7 +120,7 @@ export default function AboutSection() {
               <FeatureBlock item={rightFeatures[0]} align="left" />
             </div>
             <div className="col-start-2 row-span-2 row-start-1 flex items-center justify-center px-2">
-              <AboutPhoneSlider className="lg:max-w-none xl:max-w-[28rem]" />
+              <AboutPhoneSlider className="w-full lg:max-w-none" />
             </div>
             <div className="col-start-1 row-start-2 justify-self-end">
               <FeatureBlock item={leftFeatures[1]} align="right" />

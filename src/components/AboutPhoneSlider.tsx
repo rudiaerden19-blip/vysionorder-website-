@@ -63,7 +63,7 @@ export default function AboutPhoneSlider({ className = '' }: { className?: strin
   }, [goNext])
 
   return (
-    <div className={`flex w-full max-w-[min(100%,26rem)] items-center justify-center gap-2 sm:gap-3 xl:max-w-[28rem] ${className}`}>
+    <div className={`flex w-full max-w-[min(100%,34rem)] items-center justify-center gap-1.5 sm:gap-2 ${className}`}>
       <NavArrow direction="prev" onClick={goPrev} label="Vorige telefoonafbeelding" />
       <div className="relative min-w-0 flex-1">
         <Image
@@ -72,8 +72,8 @@ export default function AboutPhoneSlider({ className = '' }: { className?: strin
           alt={slide.alt}
           width={464}
           height={912}
-          className="mx-auto h-auto w-full max-w-[min(100%,20rem)] [filter:drop-shadow(0_24px_40px_rgba(0,0,0,0.22))] sm:max-w-[19rem] lg:max-w-[20rem] xl:max-w-[22rem]"
-          sizes="(max-width: 1023px) 320px, 352px"
+          className="mx-auto h-auto w-full max-w-[min(100%,17.5rem)] [filter:drop-shadow(0_28px_48px_rgba(0,0,0,0.24))] sm:max-w-[20rem] md:max-w-[22rem] lg:max-w-[26rem] xl:max-w-[28rem] 2xl:max-w-[30rem]"
+          sizes="(max-width: 639px) 280px, (max-width: 1023px) 352px, 448px"
           priority={index === 0}
         />
         <p className="sr-only">
