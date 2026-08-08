@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { REGISTER_URL } from '@/lib/site'
+import { DEMO_LIVE_URL, REGISTER_URL } from '@/lib/site'
 
 const HERO_IMAGE = '/images/hero-vysion-order-header.jpg'
 
@@ -43,6 +43,14 @@ export default function LandingHero() {
         <p className="mt-7 max-w-2xl text-base font-semibold leading-snug text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)] sm:mt-8 sm:text-lg md:text-xl">
           Het meest professionele online bestelsysteem op de markt — zonder transactiekosten
         </p>
+        <a
+          href={DEMO_LIVE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex min-h-[48px] items-center justify-center rounded-full border-2 border-white/80 bg-black/25 px-8 py-3 text-base font-semibold text-white backdrop-blur-[2px] transition-colors hover:bg-black/40 sm:mt-7"
+        >
+          Probeer het live
+        </a>
       </div>
     </section>
   )
