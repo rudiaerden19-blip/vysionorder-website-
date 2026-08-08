@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import { z } from 'zod'
-import { VYSION_KASSA_ORIGIN } from '@/lib/vysion-site'
+import { MAIN_PLATFORM_URL } from '@/lib/site'
 
 const contactFormSchema = z.object({
   firstName: z.string().min(1).max(100),
@@ -45,7 +45,7 @@ async function sendViaZoho(data: z.infer<typeof contactFormSchema>) {
 }
 
 async function proxyToKassaPlatform(body: unknown) {
-  const upstream = await fetch(`${VYSION_KASSA_ORIGIN}/api/contact`, {
+  const upstream = await fetch(`${MAIN_PLATFORM_URL}/api/contact`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -1,120 +1,26 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Taalkiezers: Windows-Chromium toont vlag-emoji's niet zonder geschikte fontstack (leeg schijnbaar) */
-/* Kassa tafelplan: grabbing-cursor zonder extra React re-renders op elke aanraking */
-body.vysion-floor-plan-grabbing {
-  cursor: grabbing !important;
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --accent: #e85a3c;
+  --dark: #1a1a1a;
 }
 
-.vysion-locale-emoji {
-  font-family:
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    'Apple Color Emoji',
-    'Noto Color Emoji',
-    'Twemoji Mozilla',
-    sans-serif;
-  font-style: normal;
-  font-weight: normal;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-dark: var(--dark);
+  --font-sans: var(--font-inter);
 }
 
-/* Klantscherm: geen witte rand door body/html-defaults; vol zwart canvas.
- * color-scheme: hint aan browser voor donkere UI-randen waar ondersteund (geen controle over adresbalktekst zelf). */
-html.vysion-klantscherm-root,
-html.vysion-klantscherm-root body {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  max-width: none !important;
-  min-height: 100dvh !important;
-  background: #000000 !important;
-  color-scheme: dark !important;
-  overflow-x: hidden !important;
-  /* LCD tweede scherm: subpixel-RGB i.p.v. grijs-antialiased — vaak scherper op klassieke panels */
-  -webkit-font-smoothing: auto !important;
-  -moz-osx-font-smoothing: auto !important;
-  text-rendering: geometricPrecision;
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
 
-/* Hoofdkassa: zelfde lcd-hooks als klantscherm — alleen actief op /admin/kassa (zie pagina useEffect). */
-html.vysion-kassa-root,
-html.vysion-kassa-root body {
-  -webkit-font-smoothing: auto !important;
-  -moz-osx-font-smoothing: auto !important;
-  text-rendering: geometricPrecision;
-}
-
-/* Admin + modals: één tik, geen dubbel-tap-zoom-vertraging op touch-pc/kiosk */
-[data-vysion-admin-scroll] button,
-[data-vysion-admin-scroll] a,
-[data-vysion-admin-scroll] input,
-[data-vysion-admin-scroll] select,
-[data-vysion-admin-scroll] textarea,
-[data-vysion-admin-scroll] label,
-[data-vysion-admin-scroll] [role='button'],
-[data-vysion-modal-overlay] button,
-[data-vysion-modal-overlay] a,
-[data-vysion-modal-overlay] input,
-[data-vysion-modal-overlay] select,
-[data-vysion-modal-overlay] textarea,
-[data-vysion-modal-overlay] label,
-[data-vysion-modal-overlay] [role='button'] {
-  touch-action: manipulation;
-}
-
-/* Admin modals: scrollbare overlay op touch */
-[data-vysion-modal-overlay] {
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
-}
-
-/*
- * Embedded touch / kiosk-WebView (o.a. Elo): hint naar manipulation om dubbeltik-zoom-vertraging te beperken.
- * Scrollports met eigen touch-action (bv. menu-scroll met touch-manipulation) blijven werken voor verticaal slepen.
- */
-html.vysion-kassa-root {
-  touch-action: manipulation;
-}
-
-/* Donkere kassa: voorkom wit “rubber band” / lege rand (Safari iOS) — alleen met .kassa-dark-appearance (pagina zet class). */
-html.vysion-kassa-root.kassa-dark-appearance,
-html.vysion-kassa-root.kassa-dark-appearance body {
-  background-color: #0b0f14 !important;
-  color-scheme: dark;
-}
-
-/* Foto-tegels en thumbnails: scherpere herberekening bij opschalen in Chromium/Edge op klassieke lcd */
-html.vysion-klantscherm-root img,
-html.vysion-klantscherm-root picture img,
-html.vysion-kassa-root img,
-html.vysion-kassa-root picture img {
-  image-rendering: auto;
-  image-rendering: -webkit-optimize-contrast;
-}
-
-@keyframes klantscherm-clock-colon {
-  0%,
-  45% {
-    opacity: 1;
-  }
-  50%,
-  95% {
-    opacity: 0.22;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.vysion-klantscherm-clock-colon {
-  animation: klantscherm-clock-colon 1s linear infinite;
-  font-weight: 800;
-}
-
-/* Zichtbare diepte op grijs/wit (marketing homepage) — iets ingetoomd t.o.v. maximum */
 @layer utilities {
   .shadow-home-btn {
     box-shadow:
@@ -122,552 +28,112 @@ html.vysion-kassa-root picture img {
       0 12px 28px -6px rgba(0, 0, 0, 0.2),
       0 5px 14px rgba(0, 0, 0, 0.14);
   }
-  .shadow-home-image {
-    box-shadow:
-      0 34px 82px -18px rgba(0, 0, 0, 0.3),
-      0 20px 54px -10px rgba(0, 0, 0, 0.22),
-      0 9px 26px rgba(0, 0, 0, 0.15);
-  }
-  /* Grote foto op lichte achtergrond (Why Vysion POS) — lichter dan shadow-home-image */
-  .shadow-home-photo {
-    box-shadow:
-      0 26px 56px -12px rgba(0, 0, 0, 0.28),
-      0 14px 36px -8px rgba(0, 0, 0, 0.2),
-      0 6px 18px rgba(0, 0, 0, 0.13);
-  }
   .shadow-home-card {
     box-shadow:
       0 28px 68px -16px rgba(0, 0, 0, 0.26),
       0 16px 44px -10px rgba(0, 0, 0, 0.19),
       0 7px 20px rgba(0, 0, 0, 0.13);
   }
-  .shadow-home-thumb {
+  .shadow-home-photo {
     box-shadow:
-      0 34px 80px -16px rgba(0, 0, 0, 0.38),
-      0 18px 44px -8px rgba(0, 0, 0, 0.28),
-      0 8px 22px rgba(0, 0, 0, 0.2);
-  }
-  .shadow-home-benefit {
-    box-shadow:
-      0 38px 92px -18px rgba(0, 0, 0, 0.36),
-      0 20px 50px -10px rgba(0, 0, 0, 0.27),
-      0 8px 24px rgba(0, 0, 0, 0.19);
-  }
-  .shadow-home-benefit-hover {
-    box-shadow:
-      0 46px 102px -18px rgba(0, 0, 0, 0.42),
-      0 24px 56px -10px rgba(0, 0, 0, 0.32),
-      0 10px 28px rgba(0, 0, 0, 0.22);
+      0 26px 56px -12px rgba(0, 0, 0, 0.28),
+      0 14px 36px -8px rgba(0, 0, 0, 0.2),
+      0 6px 18px rgba(0, 0, 0, 0.13);
   }
   .shadow-home-float {
     box-shadow:
-      0 26px 52px -8px rgba(0, 0, 0, 0.33),
-      0 12px 26px rgba(0, 0, 0, 0.22);
-  }
-  .shadow-home-ghost {
-    box-shadow:
-      0 30px 60px -10px rgba(0, 0, 0, 0.44),
-      0 15px 34px rgba(0, 0, 0, 0.28);
+      0 12px 28px -8px rgba(0, 0, 0, 0.18),
+      0 4px 12px rgba(0, 0, 0, 0.1);
   }
 }
 
-/* Tafelkiosk / touchscreen: sneller dan dubbel-tap-zoom, subtiele tik-highlight */
-.kiosk-touch-ui {
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.07);
+/* Functies: foto links, vakken rechts (afb. 2). Op smalle mobiel wel stack. */
+#functies .features-layout-split {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  column-gap: 2.5rem !important;
+  row-gap: 0 !important;
+  align-items: start !important;
+  width: 100% !important;
 }
 
-@keyframes partner-marquee-scroll {
-  from {
-    transform: translate3d(0, 0, 0);
+@media (max-width: 639px) {
+  #functies .features-layout-split {
+    grid-template-columns: 1fr !important;
+    row-gap: 2.5rem !important;
   }
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-/*
- * Let op: brede tracks gebruiken max-width: none. Standaard blokken: max-width: 100%.
- * De marquee-track moet breder dan het scherm
- * kunnen zijn voor een correcte loop (translateX(-50%) === één segment). Zonder max-width: none
- * klopt de animatie niet → dubbele logo’s / overlap / rare strepen.
- */
-/* Waarom-Vysion: promo-regel rechts → links */
-@keyframes why-vysion-promo-scroll {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-.why-vysion-promo-viewport {
-  overflow: hidden;
-  width: 100%;
-}
-
-.why-vysion-promo-track {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: max-content;
-  min-width: max-content;
-  max-width: none;
-  animation: why-vysion-promo-scroll 22s linear infinite;
-  will-change: transform;
-}
-
-.why-vysion-promo-segment {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  flex: 0 0 auto;
-  flex-shrink: 0;
-  gap: clamp(3rem, 8vw, 5rem);
-  padding-right: clamp(3rem, 8vw, 5rem);
-  max-width: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .why-vysion-promo-track {
-    animation: none;
-    justify-content: center;
-    width: 100%;
-    min-width: 0;
-  }
-}
-
-.partner-marquee-viewport,
-.partner-marquee-track,
-.partner-marquee-segment {
-  max-width: none;
-}
-
-.partner-marquee-viewport {
-  overflow: hidden;
-}
-
-.partner-marquee-track {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  width: max-content;
-  min-width: max-content;
-  animation: partner-marquee-scroll 26s linear infinite;
-  will-change: transform;
-}
-
-.partner-marquee-segment {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  flex: 0 0 auto;
-  flex-shrink: 0;
-  gap: 1rem;
-}
-
-.partner-marquee-slot {
-  box-sizing: border-box;
-  flex: 0 0 auto;
-  flex-shrink: 0;
-  width: 15.75rem;
-  padding: 0 0.5rem;
-  background: transparent;
-  display: flex;
-  align-items: stretch;
-}
-
-.partner-success-card {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  border-radius: 1rem;
-  background: #fff;
-  padding: 1rem 1rem 0.875rem;
-  box-shadow: none;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.partner-success-card .partner-success-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 4.25rem;
-  margin-bottom: 0.75rem;
-}
-
-.partner-success-card .partner-success-logo img {
-  max-height: 4rem;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-  object-position: center;
 }
 
 @media (min-width: 640px) {
-  .partner-marquee-segment {
-    gap: 1.25rem;
+  #functies .features-layout-split {
+    align-items: stretch !important;
   }
 
-  .partner-marquee-slot {
-    width: 17.5rem;
-    padding: 0 0.625rem;
+  #functies .features-photo {
+    min-height: 100%;
+    height: 100%;
+    aspect-ratio: auto !important;
   }
+}
 
-  .partner-success-card {
-    padding: 1.125rem 1.125rem 1rem;
+@media (min-width: 1024px) {
+  #functies .features-layout-split {
+    column-gap: 4rem !important;
   }
+}
 
-  .partner-success-card .partner-success-logo {
-    min-height: 4.75rem;
-    margin-bottom: 0.875rem;
+@media (min-width: 1280px) {
+  #functies .features-layout-split {
+    column-gap: 5rem !important;
   }
+}
 
-  .partner-success-card .partner-success-logo img {
-    max-height: 4.5rem;
+#functies .features-section-header {
+  margin-bottom: 5rem !important;
+}
+
+@media (min-width: 640px) {
+  #functies .features-section-header {
+    margin-bottom: 6rem !important;
   }
+}
+
+@media (min-width: 1024px) {
+  #functies .features-section-header {
+    margin-bottom: 7rem !important;
+  }
+}
+
+.features-card {
+  background: #fff;
+  border: 1px solid rgb(229 231 235 / 0.9);
+  border-left: 5px solid var(--accent);
+  border-radius: 1rem;
+  box-shadow:
+    0 28px 68px -16px rgba(0, 0, 0, 0.22),
+    0 16px 44px -10px rgba(0, 0, 0, 0.16);
+  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+  min-width: 0;
+}
+
+#functies .features-cards-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  column-gap: 1.25rem !important;
+  row-gap: 1.25rem !important;
+  width: 100% !important;
+  min-width: 0 !important;
 }
 
 @media (min-width: 768px) {
-  .partner-marquee-segment {
-    gap: 1.5rem;
-  }
-
-  .partner-marquee-slot {
-    width: 19rem;
-    padding: 0 0.75rem;
-  }
-
-  .partner-success-card .partner-success-logo {
-    min-height: 5.25rem;
-  }
-
-  .partner-success-card .partner-success-logo img {
-    max-height: 5rem;
+  #functies .features-cards-grid {
+    column-gap: 1.5rem !important;
+    row-gap: 1.5rem !important;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .partner-marquee-track {
-    animation: none;
-  }
-}
-
-:root {
-  --primary: #3C4D6B;
-  --primary-light: #4A5D7B;
-  --accent: #E85A3C;
-}
-
-/*
- * Lichtblauwe UI-knoppen (Tailwind arbitrary bg[#58CCFF] en veelgebruikte hover-tinten):
- * bij ingedrukt donker navy — alle tenants / schermen die die classes gebruiken.
- */
-@layer components {
-  :is(button, a):active[class*='bg-[#58CCFF]'],
-  :is(button, a):active[class*='bg-[#47c6fe]'],
-  :is(button, a):active[class*='bg-[#43bef7]'] {
-    background-color: #3c4d6b !important;
-    color: #ffffff !important;
-  }
-}
-
-/* ===========================================
-   CRITICAL: PREVENT ALL HORIZONTAL OVERFLOW
-   =========================================== */
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* Geen globale max-width op alle div’s: absolute flyouts (admin hamburger, modals) zouden
-   tot parent-breedte (b.v. alleen de MENU-knop) worden geknipt — zichtbare tekst/submenu’s kapot.
-   Horizontale scroll: html/body overflow-x clip + body width 100%. */
-
-html {
-  margin: 0;
-  padding: 0;
-  overflow-x: clip;
-  overflow-y: auto;
-  width: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  /* Gebruik % i.p.v. 100vw: 100vw telt scrollbalk mee → horizontale micro-shift / subpixels
-     op 15" Windows met schaal (125%/150%) en wazige tekst in fullscreen UI’s. */
-  width: 100%;
-  max-width: 100%;
-  overflow-x: clip;
-  overflow-y: visible;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-}
-
-/* 
-  BELANGRIJK: We gebruiken overflow-x: clip NIET hidden!
-  overflow: hidden breekt position: sticky
-  overflow: clip breekt sticky NIET
-*/
-@supports not (overflow-x: clip) {
-  /* Alleen als clip niet ondersteund wordt, gebruik hidden als fallback */
-  html, body {
-    overflow-x: hidden;
-  }
-}
-
-body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Images never exceed container */
-img, video, iframe, embed, object {
-  max-width: 100%;
+/* Platform-screenshots: direct uit /public, geen kunstmatige downscale. */
+#platform .platform-shot,
+.platform-shot-lightbox {
   height: auto;
 }
-
-/* Prevent iOS zoom on input focus */
-@media (max-width: 768px) {
-  input, select, textarea {
-    font-size: 16px !important;
-  }
-}
-
-/* Placeholder styling */
-input::placeholder,
-textarea::placeholder {
-  color: #9ca3af;
-}
-
-/* ===========================================
-   VERBERG SPINNER PIJLTJES BIJ NUMMER VELDEN
-   =========================================== */
-
-/* Chrome, Safari, Edge, Opera */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
-
-/* Productie-kassa POS (zelfde visueel als GKS-preview): korrel vs effen tegelvlak */
-.gks-menu-plate-grain {
-  background-color: #333336;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeColorMatrix type='matrix' values='1.32 0 0 0 -0.12 0 1.32 0 0 -0.12 0 0 1.32 0 -0.12 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='96' height='96' filter='url(%23n)' opacity='0.72'/%3E%3C/svg%3E");
-  background-size: 96px 96px;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
-}
-
-/** Terras-plattegrond: gedempt groen met dezelfde korrel (niet fel). */
-.gks-floor-terrace-grain {
-  background-color: #3a4d3c;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeColorMatrix type='matrix' values='1.32 0 0 0 -0.12 0 1.32 0 0 -0.12 0 0 1.32 0 -0.12 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='96' height='96' filter='url(%23n)' opacity='0.72'/%3E%3C/svg%3E");
-  background-size: 96px 96px;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-blend-mode: overlay;
-}
-
-.gks-menu-vignette {
-  position: relative;
-  isolation: isolate;
-}
-.gks-menu-vignette::after {
-  content: '';
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  box-shadow: inset 0 0 72px rgba(0, 0, 0, 0.28), inset 0 0 24px rgba(0, 0, 0, 0.12);
-}
-
-.gks-menu-recess-tray {
-  position: relative;
-  isolation: isolate;
-  background-color: #2a2a2e;
-  border: 1px solid #121212;
-  box-shadow:
-    inset 0 3px 12px rgba(0, 0, 0, 0.62),
-    inset 0 1px 3px rgba(0, 0, 0, 0.48),
-    0 1px 0 rgba(255, 255, 255, 0.05);
-}
-.gks-menu-recess-tray::after {
-  content: '';
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  border-radius: inherit;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-}
-
-/* ===========================================
-   SCROLLBAR HIDE
-   =========================================== */
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* ===========================================
-   ANIMATIONS
-   =========================================== */
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.6s ease-out forwards;
-}
-
-@keyframes retail-barcode-scan-line {
-  0%,
-  100% {
-    top: 10%;
-    opacity: 0.45;
-  }
-  50% {
-    top: calc(100% - 12px);
-    opacity: 1;
-  }
-}
-
-.animate-retail-barcode-scan-line {
-  animation: retail-barcode-scan-line 2.1s ease-in-out infinite;
-}
-
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-
-/* ===========================================
-   BUTTONS
-   =========================================== */
-
-.btn-primary {
-  @apply bg-accent text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all duration-300 shadow-home-btn;
-}
-
-.btn-primary:hover {
-  @apply bg-opacity-90 transform scale-105;
-  box-shadow:
-    0 26px 54px -10px rgba(0, 0, 0, 0.26),
-    0 14px 32px rgba(0, 0, 0, 0.18);
-}
-
-.btn-outline {
-  @apply border-2 border-white text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all duration-300 shadow-home-ghost;
-}
-
-.btn-outline:hover {
-  @apply bg-white text-gray-900;
-}
-
-/* ===========================================
-   SAFE AREA (iPhone notch)
-   =========================================== */
-
-.pb-safe {
-  padding-bottom: env(safe-area-inset-bottom, 0);
-}
-
-.pt-safe {
-  padding-top: env(safe-area-inset-top, 0);
-}
-
-/* ===========================================
-   MOBILE CONTAINER FIX
-   =========================================== */
-
-.mobile-container {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (min-width: 640px) {
-  .mobile-container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-/* Homepage pricing-card stamp — “slam” + fade when card enters view */
-.home-stamp-wrap {
-  transform-origin: 75% 78%;
-  will-change: transform, opacity;
-}
-
-.home-stamp-wrap.home-stamp-hidden {
-  opacity: 0;
-  transform: scale(1.48) rotate(-19deg);
-}
-
-.home-stamp-wrap.home-stamp-visible {
-  /* Korte vertraging vóór slam/fade — voelt rustiger aan bij scroll-in */
-  animation: home-stamp-slam 0.58s cubic-bezier(0.2, 0.95, 0.35, 1) 0.22s forwards;
-}
-
-@keyframes home-stamp-slam {
-  0% {
-    opacity: 0;
-    transform: scale(1.5) rotate(-19deg);
-  }
-  52% {
-    opacity: 0.96;
-    transform: scale(0.94) rotate(-10deg);
-  }
-  76% {
-    transform: scale(1.04) rotate(-12.5deg);
-  }
-  100% {
-    opacity: 0.93;
-    transform: scale(1) rotate(-12deg);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .home-stamp-wrap.home-stamp-visible {
-    animation: home-stamp-slam-reduced 0.01s 0s forwards;
-  }
-}
-
-@keyframes home-stamp-slam-reduced {
-  to {
-    opacity: 0.92;
-    transform: scale(1) rotate(-12deg);
-  }
-}
-
-
