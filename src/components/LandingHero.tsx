@@ -47,7 +47,7 @@ export default function LandingHero() {
           href={DEMO_LIVE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-flex min-h-[48px] items-center justify-center rounded-full border-2 border-white/80 bg-black/25 px-8 py-3 text-base font-semibold text-white backdrop-blur-[2px] transition-colors hover:bg-black/40 sm:mt-7"
+          className="mt-[2cm] inline-flex min-h-[48px] items-center justify-center rounded-full bg-accent px-8 py-3 text-base font-semibold text-white shadow-home-btn transition-colors hover:bg-accent/90"
         >
           Probeer het live
         </a>
