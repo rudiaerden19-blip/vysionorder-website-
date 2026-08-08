@@ -1,0 +1,85 @@
+'use client'
+
+import Image from 'next/image'
+import {
+  Rocket,
+} from 'lucide-react'
+import { useLanguage } from '@/i18n'
+import { PLATFORM_PAGES } from '@/lib/platform-pages'
+import { vysionKassaUrl } from '@/lib/vysion-site'
+
+const ctaIconClass =
+  'h-[1.05rem] w-[1.05rem] shrink-0 sm:h-[1.15rem] sm:w-[1.15rem] stroke-[2.25]'
+
+const cardShellClasses =
+  'group flex min-h-[240px] sm:min-h-[260px] flex-col overflow-hidden rounded-2xl border border-gray-200/60 bg-[#f4f4f4] text-center shadow-home-card transition-all duration-300 hover:z-10 hover:-translate-y-0.5 hover:border-accent/55 hover:shadow-[0_12px_40px_-6px_rgba(232,90,60,0.55),0_28px_70px_-12px_rgba(232,90,60,0.42),0_0_0_1px_rgba(232,90,60,0.2),0_0_60px_8px_rgba(232,90,60,0.28)] active:z-10 active:-translate-y-0.5 active:border-accent/60 active:shadow-[0_12px_40px_-6px_rgba(232,90,60,0.6),0_28px_70px_-12px_rgba(232,90,60,0.48),0_0_0_1px_rgba(232,90,60,0.22),0_0_72px_10px_rgba(232,90,60,0.32)]'
+
+export default function PlatformGridSection() {
+  const { t, locale } = useLanguage()
+
+  return (
+    <section id="platform" className="py-20 sm:py-28 lg:py-36 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight">
+            {t('platform.sectionTitle')}
+          </h2>
+          <p className="mt-4 text-lg sm:text-xl text-gray-800 font-medium leading-snug">
+            {t('platform.sectionSubtitle1')}
+          </p>
+        </header>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-6 lg:gap-7">
+          {PLATFORM_PAGES.map(({ slug, msgKey, cardHeaderImage }) => {
+            const headerAlt =
+              cardHeaderImage && t(`platform.${msgKey}.cardHeaderAlt`) !==
+                `platform.${msgKey}.cardHeaderAlt`
+                ? t(`platform.${msgKey}.cardHeaderAlt`)
+                : ''
+
+            return (
+              <div key={slug} className={cardShellClasses}>
+                <div className="relative h-28 sm:h-32 w-full shrink-0 overflow-hidden bg-gradient-to-br from-gray-300 via-gray-200 to-gray-100">
+                  {cardHeaderImage ? (
+                    <Image
+                      src={cardHeaderImage}
+                      alt={headerAlt}
+                      fill
+                      loading="lazy"
+                      className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 20vw"
+                    />
+                  ) : null}
+                </div>
+
+                <div className="flex flex-1 flex-col items-center px-4 pb-5 pt-4 sm:px-6 sm:pb-6 sm:pt-5">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2.5 leading-snug px-1">
+                    {t(`platform.${msgKey}.title`)}
+                  </h3>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed line-clamp-5">
+                    {t(`platform.${msgKey}.teaser`)}
+                  </p>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+
+        <div className="mt-10 sm:mt-12 max-w-5xl mx-auto text-center">
+          <p className="text-sm sm:text-base text-gray-600 leading-snug">
+            {t('platform.gridTrustLine')}
+          </p>
+          <div className="mt-[2cm] flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4">
+            <a
+              href={`${vysionKassaUrl('/registreer')}?lang=${locale}&line=online_bestellen`}
+              className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-home-btn transition-colors hover:bg-accent/90 sm:min-w-[200px] sm:text-base"
+            >
+              <Rocket className={ctaIconClass} aria-hidden />
+              {t('heroLanding.ctaStartFree')}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
