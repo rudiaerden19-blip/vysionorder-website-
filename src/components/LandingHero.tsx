@@ -23,7 +23,7 @@ export default function LandingHero() {
           Meer online bestellingen. Minder gedoe.
         </h1>
         <p className="mt-4 sm:mt-5 text-lg sm:text-xl text-white/90 font-medium max-w-2xl leading-snug">
-          Klanten bestellen online. Jij ziet alles op één plek — keuken en kassa mee.
+          30% meer bestellingen
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
