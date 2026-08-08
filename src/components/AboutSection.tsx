@@ -92,7 +92,7 @@ export default function AboutSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="mx-auto max-w-3xl text-center">
           <p className="text-base font-medium text-gray-500 sm:text-lg">Een compleet</p>
-          <h2 className="mt-1 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-[2.35rem]">
+          <h2 className="mt-1 text-3xl font-bold tracking-tight text-accent sm:text-4xl lg:text-[2.35rem]">
             Bestelplatform aan 0% commissie
           </h2>
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-accent" aria-hidden />

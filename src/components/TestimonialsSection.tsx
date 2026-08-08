@@ -45,7 +45,7 @@ export default function TestimonialsSection() {
       className="scroll-mt-24 border-b border-gray-100 bg-white py-20 sm:py-24 lg:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="mx-auto max-w-3xl text-center text-3xl font-bold leading-tight tracking-tight text-gray-900 sm:text-4xl lg:text-[2.35rem]">
+        <h2 className="mx-auto max-w-3xl text-center text-3xl font-bold leading-tight tracking-tight text-accent sm:text-4xl lg:text-[2.35rem]">
           Wat onze klanten zeggen
         </h2>
 

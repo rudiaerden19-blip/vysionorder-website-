@@ -46,7 +46,7 @@ export default function FeaturesSection() {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         <header className="features-section-header mx-auto max-w-2xl text-center">
           <p className="mb-4 text-lg font-bold uppercase tracking-[0.12em] text-accent sm:text-xl">Functies</p>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-accent sm:text-4xl">
             Doe jij wat je graag doet: mensen verwennen met lekker eten — de rest doen wij.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-gray-600">

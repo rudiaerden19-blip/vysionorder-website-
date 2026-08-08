@@ -7,7 +7,7 @@ export default function DemoLiveSection() {
       className="scroll-mt-24 border-b border-gray-100 bg-gradient-to-b from-[#f6f4f1] to-white py-20 sm:py-24 lg:py-28"
     >
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="text-3xl font-bold tracking-tight text-accent sm:text-4xl">
           Wil je het platform in actie zien?
         </h2>
         <p className="mt-5 text-lg leading-relaxed text-gray-600 sm:text-xl">
