@@ -40,7 +40,7 @@ export default function LandingHero() {
             Bekijk functies
           </Link>
         </div>
-        <p className="mt-7 sm:mt-8 text-base sm:text-lg md:text-xl font-semibold text-accent max-w-2xl leading-snug drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)]">
+        <p className="mt-[2cm] text-base sm:text-lg md:text-xl font-semibold text-white max-w-2xl leading-snug drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)]">
           Het meest professionele online bestelsysteem op de markt — zonder transactiekosten
         </p>
       </div>
