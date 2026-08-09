@@ -31,7 +31,7 @@ export default function MissionSection() {
     <section id="inbegrepen" className="relative scroll-mt-24 overflow-hidden py-20 sm:py-24 lg:py-28">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url(/images/mission-inbegrepen-bg.jpg)' }}
+        style={{ backgroundImage: 'url(/images/mission-inbegrepen-bg.png)' }}
         aria-hidden
       />
       <div className="absolute inset-0 bg-black/65" aria-hidden />
