@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { DEMO_LIVE_URL, REGISTER_URL } from '@/lib/site'
+import GoogleReviewsHeroBadge from '@/components/GoogleReviewsHeroBadge'
 
 const HERO_IMAGE = '/images/hero-vysion-order-header.jpg'
 
@@ -54,6 +55,7 @@ export default function LandingHero() {
         >
           Probeer het live
         </a>
+        <GoogleReviewsHeroBadge className="mt-6" />
       </div>
     </section>
   )
