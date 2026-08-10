@@ -2,8 +2,9 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { DEMO_LIVE_URL, REGISTER_URL } from '@/lib/site'
+import { DEMO_LIVE_URL, platformRegisterUrl } from '@/lib/site'
 import GoogleReviewsHeroBadge from '@/components/GoogleReviewsHeroBadge'
+import { useLanguage } from '@/i18n'
 
 const HERO_IMAGE = '/images/hero-vysion-order-header.jpg'
 
@@ -11,12 +12,15 @@ const HERO_CTA_BTN =
   'bg-accent hover:bg-accent/90'
 
 export default function LandingHero() {
+  const { t, locale } = useLanguage()
+  const registerUrl = platformRegisterUrl(locale)
+
   return (
     <section className="relative flex min-h-[min(100svh,920px)] w-full flex-col overflow-hidden pb-8 pt-20 text-white sm:min-h-[82svh]">
       <div className="absolute inset-x-0 bottom-0 top-[-5rem]">
         <Image
           src={HERO_IMAGE}
-          alt="Restaurantzaal met gedekte tafels, online bestellen met Vysion Order"
+          alt={t('hero.imageAlt')}
           fill
           priority
           sizes="100vw"
@@ -27,25 +31,25 @@ export default function LandingHero() {
 
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 py-8 text-center sm:px-6">
         <h1 className="max-w-4xl text-3xl font-bold leading-tight tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.55)] sm:text-4xl md:text-5xl lg:text-[2.85rem]">
-          Meer online bestellingen. Minder gedoe.
+          {t('hero.title')}
         </h1>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href={REGISTER_URL}
+            href={registerUrl}
             className={`inline-flex min-h-[48px] items-center justify-center rounded-full px-8 py-3 text-base font-semibold text-white shadow-home-btn transition-colors ${HERO_CTA_BTN}`}
           >
-            Start gratis proefperiode
+            {t('hero.ctaTrial')}
           </a>
           <Link
             href="/#functies"
             className="inline-flex min-h-[48px] items-center justify-center rounded-full border-2 border-white/80 bg-black/25 px-8 py-3 text-base font-semibold text-white backdrop-blur-[2px] transition-colors hover:bg-black/40"
           >
-            Bekijk functies
+            {t('hero.ctaFeatures')}
           </Link>
         </div>
         <p className="mt-7 max-w-2xl text-base font-semibold leading-snug text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.45)] sm:mt-8 sm:text-lg md:text-xl">
-          Het meest professionele online bestelsysteem op de markt, zonder transactiekosten
+          {t('hero.subtitle')}
         </p>
         <a
           href={DEMO_LIVE_URL}
@@ -53,7 +57,7 @@ export default function LandingHero() {
           rel="noopener noreferrer"
           className={`mt-[2cm] inline-flex min-h-[48px] items-center justify-center rounded-full px-8 py-3 text-base font-semibold text-white shadow-home-btn transition-colors ${HERO_CTA_BTN}`}
         >
-          Probeer het live
+          {t('hero.ctaLive')}
         </a>
         <GoogleReviewsHeroBadge className="mt-6" />
       </div>

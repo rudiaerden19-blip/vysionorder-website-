@@ -1,23 +1,24 @@
 'use client'
 
 import { useState } from 'react'
-import { REGISTER_URL } from '@/lib/site'
+import { platformRegisterUrl } from '@/lib/site'
 import { VYSION_ORDER_MONTHLY, displayPrice } from '@/lib/pricing'
+import { useLanguage } from '@/i18n'
 
-const planFeatures = [
-  'Online bestelplatform & webshop',
-  'Afhalen en levering',
-  'Menu, categorieën & allergenen',
-  'Keukenscherm & orderstatus',
-  'Koppeling met Vysion kassa (optioneel)',
-  'Betaalterminal / Stripe',
-  'Eigen website in jouw huisstijl',
-  'Meertalig voor gasten',
-  'E-mail & telefoon support',
-  'QR-code naar je shop',
-  'Promoties & kortingscodes',
-  'Geen commissie per bestelling',
-]
+const planFeatureKeys = [
+  'platform',
+  'pickupDelivery',
+  'menuAllergens',
+  'kitchen',
+  'posOptional',
+  'stripe',
+  'branding',
+  'multilingual',
+  'support',
+  'qrShop',
+  'promoCodes',
+  'noCommission',
+] as const
 
 function FeatureCheck({ label }: { label: string }) {
   return (
@@ -38,20 +39,21 @@ function FeatureCheck({ label }: { label: string }) {
 
 export default function PricingSection() {
   const [isYearly, setIsYearly] = useState(false)
+  const { t, locale } = useLanguage()
+  const registerUrl = platformRegisterUrl(locale)
 
   const price = displayPrice(VYSION_ORDER_MONTHLY, isYearly)
-  const periodLabel = isYearly ? '/jaar' : '/maand'
+  const periodLabel = isYearly ? t('pricing.perYear') : t('pricing.perMonth')
+  const monthlyEquivalent = Math.round(VYSION_ORDER_MONTHLY * 0.9)
 
   return (
     <section id="prijzen" className="relative scroll-mt-24 overflow-hidden bg-[#e3e3e3] py-20 sm:py-28 lg:py-32">
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center sm:mb-14">
-          <h2 className="section-heading mb-4 text-3xl font-bold sm:text-4xl">1 simpele prijs</h2>
-          <p className="text-lg text-gray-600 sm:text-xl">Alles voor online bestellen. Geen verrassingen.</p>
-          <p className="mt-3 text-base font-medium text-gray-500 sm:text-lg">
-            14 dagen gratis proberen · Geen creditcard nodig · Maandelijks opzegbaar
-          </p>
-          <p className="mt-2 text-sm font-medium text-gray-600 sm:text-base">Alle prijzen excl. BTW.</p>
+          <h2 className="section-heading mb-4 text-3xl font-bold sm:text-4xl">{t('pricing.title')}</h2>
+          <p className="text-lg text-gray-600 sm:text-xl">{t('pricing.subtitle')}</p>
+          <p className="mt-3 text-base font-medium text-gray-500 sm:text-lg">{t('pricing.trialNote')}</p>
+          <p className="mt-2 text-sm font-medium text-gray-600 sm:text-base">{t('pricing.vatNote')}</p>
         </div>
 
         <div className="mb-12 flex flex-col items-center">
@@ -63,7 +65,7 @@ export default function PricingSection() {
                 !isYearly ? 'bg-gray-900 text-white shadow-sm' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Maandelijks
+              {t('pricing.monthly')}
             </button>
             <button
               type="button"
@@ -72,15 +74,13 @@ export default function PricingSection() {
                 isYearly ? 'bg-gray-900 text-white shadow-sm' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Jaarlijks
+              {t('pricing.yearly')}
               <span className="absolute -right-1 -top-1.5 rounded-full bg-gray-700 px-1.5 py-0.5 text-[10px] font-semibold leading-none text-white">
-                -10%
+                {t('pricing.yearlyDiscount')}
               </span>
             </button>
           </div>
-          {isYearly && (
-            <p className="mt-3 text-sm text-gray-600">Je bespaart 10% met een jaarabonnement.</p>
-          )}
+          {isYearly && <p className="mt-3 text-sm text-gray-600">{t('pricing.yearlySaving')}</p>}
         </div>
 
         <div className="mx-auto max-w-lg">
@@ -92,7 +92,7 @@ export default function PricingSection() {
                     <path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-accent">Vysion Order</h3>
+                <h3 className="text-xl font-bold text-accent">{t('pricing.planName')}</h3>
               </div>
               <div className="mb-2 flex items-baseline">
                 <span className="text-4xl font-bold tabular-nums text-gray-900 sm:text-5xl">€{price}</span>
@@ -100,21 +100,21 @@ export default function PricingSection() {
               </div>
               {isYearly && (
                 <p className="mb-4 text-sm font-medium text-accent">
-                  = €{Math.round(VYSION_ORDER_MONTHLY * 0.9)}/maand
+                  {t('pricing.equivalentMonthly', { amount: String(monthlyEquivalent) })}
                 </p>
               )}
               <ul className="mb-8 space-y-3">
-                {planFeatures.map((f) => (
-                  <FeatureCheck key={f} label={f} />
+                {planFeatureKeys.map((key) => (
+                  <FeatureCheck key={key} label={t(`pricing.features.${key}`)} />
                 ))}
               </ul>
               <a
-                href={REGISTER_URL}
+                href={registerUrl}
                 className="block w-full rounded-full bg-accent py-3.5 text-center font-semibold text-white transition-colors hover:bg-accent/90"
               >
-                Start gratis proefperiode
+                {t('pricing.ctaTrial')}
               </a>
-              <p className="mt-3 text-center text-sm font-medium text-accent">Maandelijks opzegbaar</p>
+              <p className="mt-3 text-center text-sm font-medium text-accent">{t('pricing.cancelAnytime')}</p>
             </div>
           </div>
         </div>

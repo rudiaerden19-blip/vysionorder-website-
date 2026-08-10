@@ -1,34 +1,13 @@
-import Image from 'next/image'
+'use client'
 
-const testimonials = [
-  {
-    tagline: 'Meer dan €600 bespaard per maand',
-    quote:
-      'Wij hadden eerst een andere app en moesten per bestelling een procent afgeven, zodat we aan het einde van elke maand een zeer hoog bedrag misliepen. Toen zijn we met Vysion Order gaan werken en sparen we per maand meer dan €600.',
-    name: 'Frituur Nolim',
-    place: 'Pelt',
-    photo: '/images/testimonials/frituur-nolim.jpg',
-    photoAlt: 'Interieur Frituur Nolim in Pelt',
-  },
-  {
-    tagline: '€49 per maand, €0 installatie',
-    quote:
-      'Wij hadden bij een ander platform in de buurt prijzen opgevraagd: €119 per maand en €550 installatie. We contacteerden Vysion Order en hebben nu een platform dat zeer snel en feilloos werkt voor €49 per maand, zonder één euro installatiekosten.',
-    name: 'Bar Lies',
-    place: 'Opglabeek',
-    photo: '/images/testimonials/bar-lies.jpg',
-    photoAlt: 'Bar Lies met terras in Opglabeek',
-  },
-  {
-    tagline: 'Alles aangepast naar onze wens',
-    quote:
-      'Wij hebben al veel platformen getest en misten steeds een bepaalde module die we zelf graag wilden. Vysion gebeld, een paar dagen later was alles aangepast naar onze wens. Niet normaal, wat een service!',
-    name: 'Eethuis Blonkys',
-    place: 'Dordrecht',
-    photo: '/images/testimonials/blonkys-eethuis.jpg',
-    photoAlt: 'Eethuis Blonkys in Dordrecht',
-  },
-] as const
+import Image from 'next/image'
+import { useLanguage } from '@/i18n'
+
+const testimonialMeta = [
+  { id: 'nolim' as const, name: 'Frituur Nolim', place: 'Pelt', photo: '/images/testimonials/frituur-nolim.jpg' },
+  { id: 'lies' as const, name: 'Bar Lies', place: 'Opglabeek', photo: '/images/testimonials/bar-lies.jpg' },
+  { id: 'blonkys' as const, name: 'Eethuis Blonkys', place: 'Dordrecht', photo: '/images/testimonials/blonkys-eethuis.jpg' },
+]
 
 function TestimonialPhoto({ src, alt }: { src: string; alt: string }) {
   return (
@@ -39,6 +18,8 @@ function TestimonialPhoto({ src, alt }: { src: string; alt: string }) {
 }
 
 export default function TestimonialsSection() {
+  const { t } = useLanguage()
+
   return (
     <section
       id="ervaringen"
@@ -46,16 +27,16 @@ export default function TestimonialsSection() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="section-heading mx-auto max-w-3xl text-center text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.35rem]">
-          Wat onze klanten zeggen
+          {t('testimonials.title')}
         </h2>
 
         <ul className="mt-14 grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-8 lg:gap-10">
-          {testimonials.map((item) => (
-            <li key={item.name} className="flex flex-col text-center">
-              <TestimonialPhoto src={item.photo} alt={item.photoAlt} />
-              <p className="mt-6 text-lg font-bold text-gray-900 sm:text-xl">{item.tagline}</p>
+          {testimonialMeta.map((item) => (
+            <li key={item.id} className="flex flex-col text-center">
+              <TestimonialPhoto src={item.photo} alt={t(`testimonials.items.${item.id}.photoAlt`)} />
+              <p className="mt-6 text-lg font-bold text-gray-900 sm:text-xl">{t(`testimonials.items.${item.id}.tagline`)}</p>
               <blockquote className="mt-4 flex-1 text-base leading-relaxed text-gray-600 sm:text-[1.05rem]">
-                &ldquo;{item.quote}&rdquo;
+                &ldquo;{t(`testimonials.items.${item.id}.quote`)}&rdquo;
               </blockquote>
               <footer className="mt-6 text-base text-gray-900">
                 <cite className="not-italic">

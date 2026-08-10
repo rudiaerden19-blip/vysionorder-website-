@@ -1,0 +1,251 @@
+{
+  "nav": {
+    "onlinePlatform": "Online bestelplatform",
+    "kassa": "Kassa",
+    "reservations": "Reserveringen",
+    "pricing": "Prijzen",
+    "faq": "FAQ",
+    "login": "Inloggen",
+    "startFree": "Start gratis",
+    "menuAria": "Menu"
+  },
+  "languageSelector": {
+    "ariaLabel": "Taal kiezen"
+  },
+  "hero": {
+    "imageAlt": "Restaurantzaal met gedekte tafels, online bestellen met Vysion Order",
+    "title": "Meer online bestellingen. Minder gedoe.",
+    "ctaTrial": "Start gratis proefperiode",
+    "ctaFeatures": "Bekijk functies",
+    "subtitle": "Het meest professionele online bestelsysteem op de markt, zonder transactiekosten",
+    "ctaLive": "Probeer het live"
+  },
+  "googleReviews": {
+    "ariaLabel": "Lees onze Google-reviews",
+    "label": "5 sterren op Google"
+  },
+  "about": {
+    "eyebrow": "Een compleet",
+    "title": "Bestelplatform aan 0% commissie",
+    "intro": "{siteName} koppelt webshop, afhaal en levering aan je keuken en kassa, één flow voor elke zaak op het platform.",
+    "ctaTrial": "Start gratis proefperiode",
+    "features": {
+      "pickupDelivery": {
+        "title": "Afhaal & levering",
+        "body": "Beheer afhaal- en leverbestellingen in één dashboard: tijdsloten, status en keukenscherm, zonder commissie per order."
+      },
+      "groupOrders": {
+        "title": "Groepsbestellingen",
+        "body": "Bedrijven, scholen of verenigingen bestellen apart op één link. Jij houdt overzicht; iedereen betaalt zoals afgesproken."
+      },
+      "qrOrder": {
+        "title": "Bestellen via QR-code",
+        "body": "QR op tafel of in de wachtrij: gasten scannen, bestellen en betalen zelf. Meer tijd voor service in de zaak."
+      },
+      "loyalty": {
+        "title": "Klantenkaart",
+        "body": "Sparen en stempels zitten standaard in het platform, geen apart loyalty-abonnement. Eenvoudig voor jou, leuk voor vaste klanten."
+      }
+    },
+    "slider": {
+      "prev": "Vorige telefoonafbeelding",
+      "next": "Volgende telefoonafbeelding",
+      "slideOf": "Afbeelding {current} van {total}",
+      "slides": {
+        "0": "{siteName} menu op smartphone",
+        "1": "Product toevoegen aan bestelling",
+        "2": "Opties kiezen bij friet special",
+        "3": "Sauzen en extras selecteren",
+        "4": "Afrekenen in de webshop",
+        "5": "Bestelling ontvangen bevestiging"
+      }
+    }
+  },
+  "features": {
+    "eyebrow": "Functies",
+    "title": "Doe jij wat je graag doet: mensen verwennen met lekker eten, de rest doen wij.",
+    "subtitle": "Wij hebben aan talrijke horecazaken al bewezen: 30% meer bestellingen en omzet, zonder gedoe.",
+    "imageAlt": "Horeca bediening met online bestellingen op het platform",
+    "cta": "Account aanmaken →",
+    "items": {
+      "webshop": {
+        "title": "Webshop & afhalen",
+        "body": "Klanten bestellen online voor afhalen of levering, menu, tijdsloten en betaling in één flow."
+      },
+      "adminKitchen": {
+        "title": "Admin & keuken",
+        "body": "Bestellingen komen binnen op keukenscherm en in je admin; statussen syncen met de kassa."
+      },
+      "ownWebsite": {
+        "title": "Eigen website",
+        "body": "Gratis website in jouw huisstijl, kleuren en eigen domein. Heb je al een site? Integreer de bestelknop op jouw website."
+      },
+      "noCommission": {
+        "title": "Geen commissie",
+        "body": "Vast tarief per maand. Geen percentage op omzet via het bestelplatform."
+      },
+      "multilingual": {
+        "title": "Meertalig",
+        "body": "Gasten bestellen in 9 talen, menu en checkout automatisch in de taal van je klant, zonder aparte vertalingen."
+      },
+      "posLink": {
+        "title": "Koppeling kassa",
+        "body": "Koppel het online bestelplatform aan je eigen kassa: online orders, bonnen en status in één flow, onafhankelijk van je huidige kassaleverancier."
+      }
+    }
+  },
+  "mission": {
+    "eyebrow": "Alles in één pakket",
+    "title": "Wat is inbegrepen",
+    "subtitle": "Eén online bestelplatform met alles wat je zaak nodig heeft, zonder losse modules bijkopen.",
+    "included": {
+      "onlinePlatform": "Online bestelplatform",
+      "freeWebsite": "Gratis website",
+      "whatsapp": "WhatsApp-bestellingen",
+      "loyalty": "Klantenkaart",
+      "groupOrders": "Groepsbestellingen",
+      "tableReservation": "Online tafelreservatie",
+      "posLink": "Kassa-koppeling",
+      "giftVouchers": "Cadeaubonnen",
+      "labelPrint": "Labelprintsoftware",
+      "qrMenu": "QR-code menu",
+      "qrReviews": "QR-code reviews",
+      "googleLink": "Koppeling met Google",
+      "menuEditor": "Aanpasbare menukaart",
+      "payments": "Alle betaalmethodes",
+      "notifications": "Pushberichten en e-mails",
+      "promotions": "Promoties voor klanten",
+      "channels": "Afhalen, levering & ter plaatse"
+    }
+  },
+  "promoInstall": {
+    "eyebrow": "Gratis installatie",
+    "title": "Wat doen wij?",
+    "introBefore": "Wij zetten je online bestelplatform klaar, menu, betalingen, website en vindbaarheid. Installatie",
+    "introAfter": ".",
+    "services": {
+      "launch": "Wij starten je volledige online platform op.",
+      "menuPhotos": "Wij plaatsen je volledige menu op je platform in 4K-foto's.",
+      "payments": "Wij stellen je betalingen in.",
+      "website": "Wij bouwen je website zoals jij het graag wilt.",
+      "seo": "Wij verzorgen SEO-vindbaarheid op Google."
+    },
+    "boxLabel": "Eenmalige installatie",
+    "boxNote": "Geen setup-factuur bij start.",
+    "ctaTrial": "Start gratis proefperiode",
+    "ctaLive": "Probeer het live"
+  },
+  "pricing": {
+    "title": "1 simpele prijs",
+    "subtitle": "Alles voor online bestellen. Geen verrassingen.",
+    "trialNote": "14 dagen gratis proberen · Geen creditcard nodig · Maandelijks opzegbaar",
+    "vatNote": "Alle prijzen excl. BTW.",
+    "monthly": "Maandelijks",
+    "yearly": "Jaarlijks",
+    "yearlyDiscount": "-10%",
+    "yearlySaving": "Je bespaart 10% met een jaarabonnement.",
+    "planName": "Vysion Order",
+    "perMonth": "/maand",
+    "perYear": "/jaar",
+    "equivalentMonthly": "= €{amount}/maand",
+    "ctaTrial": "Start gratis proefperiode",
+    "cancelAnytime": "Maandelijks opzegbaar",
+    "features": {
+      "platform": "Online bestelplatform & webshop",
+      "pickupDelivery": "Afhalen en levering",
+      "menuAllergens": "Menu, categorieën & allergenen",
+      "kitchen": "Keukenscherm & orderstatus",
+      "posOptional": "Koppeling met Vysion kassa (optioneel)",
+      "stripe": "Betaalterminal / Stripe",
+      "branding": "Eigen website in jouw huisstijl",
+      "multilingual": "Meertalig voor gasten",
+      "support": "E-mail & telefoon support",
+      "qrShop": "QR-code naar je shop",
+      "promoCodes": "Promoties & kortingscodes",
+      "noCommission": "Geen commissie per bestelling"
+    }
+  },
+  "mobileOrdering": {
+    "imageAlt": "Bestellingen beheren op laptop thuis in de zetel",
+    "title": "Beheer bestellingen overal waar je bent.",
+    "body": "In de zaak, op het terras of thuis: open je admin op telefoon, tablet of laptop en volg online orders, status en omzet, waar je ook bent. Pas je website aan waar je ook bent, zolang je internet hebt."
+  },
+  "demoLive": {
+    "title": "Wil je het platform in actie zien?",
+    "body": "Klik op de link, werk met onze demo en laat je overtuigen van de snelheid en professionaliteit van ons bestelplatform.",
+    "cta": "Bekijk live demo →",
+    "hint": "Demo: bestel als gast, geen account nodig."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "items": {
+      "needPos": {
+        "q": "Heb ik een volledige kassa nodig?",
+        "a": "Nee. Vysion Order werkt standalone. Wil je ook kassa en keuken? Dat kan binnen hetzelfde Vysion-account."
+      },
+      "cost": {
+        "q": "Wat kost het?",
+        "a": "€49 per maand excl. BTW. Geen commissie op bestellingen. Maandelijks opzegbaar."
+      },
+      "login": {
+        "q": "Waar log ik in na registratie?",
+        "a": "Via Inloggen op {officialHost}, je wordt doorgestuurd naar het platform met je tenant."
+      },
+      "website": {
+        "q": "Kan ik mijn bestaande website koppelen?",
+        "a": "Ja. Link een knop op je site naar je persoonlijke shop-URL (tenant.ordervysion.com). Geen iframe verplicht."
+      },
+      "multiTenant": {
+        "q": "Werkt dit voor meerdere zaken?",
+        "a": "Elke zaak heeft een eigen tenant, het platform is multi-tenant, geschikt voor vele locaties."
+      },
+      "installCost": {
+        "q": "Moet ik installatiekosten betalen?",
+        "a": "Neen. Je registreert online en start met je proefperiode."
+      },
+      "contract": {
+        "q": "Heb ik een jaarlijks contract?",
+        "a": "Neen. Maandelijks betalen en opzeggen kan altijd."
+      },
+      "start": {
+        "q": "Hoe start ik?",
+        "a": "Registreer via Start gratis, je gaat naar {registerHost} met productlijn online bestellen."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Wat onze klanten zeggen",
+    "items": {
+      "nolim": {
+        "tagline": "Meer dan €600 bespaard per maand",
+        "quote": "Wij hadden eerst een andere app en moesten per bestelling een procent afgeven, zodat we aan het einde van elke maand een zeer hoog bedrag misliepen. Toen zijn we met Vysion Order gaan werken en sparen we per maand meer dan €600.",
+        "photoAlt": "Interieur Frituur Nolim in Pelt"
+      },
+      "lies": {
+        "tagline": "€49 per maand, €0 installatie",
+        "quote": "Wij hadden bij een ander platform in de buurt prijzen opgevraagd: €119 per maand en €550 installatie. We contacteerden Vysion Order en hebben nu een platform dat zeer snel en feilloos werkt voor €49 per maand, zonder één euro installatiekosten.",
+        "photoAlt": "Bar Lies met terras in Opglabeek"
+      },
+      "blonkys": {
+        "tagline": "Alles aangepast naar onze wens",
+        "quote": "Wij hebben al veel platformen getest en misten steeds een bepaalde module die we zelf graag wilden. Vysion gebeld, een paar dagen later was alles aangepast naar onze wens. Niet normaal, wat een service!",
+        "photoAlt": "Eethuis Blonkys in Dordrecht"
+      }
+    }
+  },
+  "footer": {
+    "addressLabel": "Adres:",
+    "officialSite": "{siteName}, officiële website",
+    "productNav": "Product",
+    "featuresLink": "Functies & platform",
+    "pricingLink": "Prijzen",
+    "companyNav": "Bedrijf",
+    "aboutLink": "Over ons",
+    "contact": "Contact",
+    "support": "Support",
+    "privacy": "Privacy",
+    "legal": "Juridisch",
+    "copyright": "© {year} Vysion Group. Alle rechten voorbehouden.",
+    "design": "Design by Vysion"
+  }
+}

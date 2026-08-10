@@ -12,10 +12,18 @@ export const PRODUCT_LINE = 'online_bestellen' as const
 
 export const LOGIN_PATH = '/inloggen'
 
-export const LOGIN_URL = `${MAIN_PLATFORM_URL}/login?lang=nl&productLine=${PRODUCT_LINE}`
+export function platformLoginUrl(locale: string) {
+  return `${MAIN_PLATFORM_URL}/login?lang=${locale}&productLine=${PRODUCT_LINE}`
+}
 
 /** Registratie op het platform (online bestellen-productlijn). */
-export const REGISTER_URL = `${MAIN_PLATFORM_URL}/registreer?line=${PRODUCT_LINE}&lang=nl`
+export function platformRegisterUrl(locale: string) {
+  return `${MAIN_PLATFORM_URL}/registreer?line=${PRODUCT_LINE}&lang=${locale}`
+}
+
+export const LOGIN_URL = platformLoginUrl('nl')
+
+export const REGISTER_URL = platformRegisterUrl('nl')
 
 /** Publieke demo-webshop (Frituur Nolim) — menu bestellen in actie. */
 export const DEMO_LIVE_URL = 'https://frituurnolim.ordervysion.com?demo=bekijk'

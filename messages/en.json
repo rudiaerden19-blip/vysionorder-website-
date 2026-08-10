@@ -1,0 +1,251 @@
+{
+  "nav": {
+    "onlinePlatform": "Online ordering platform",
+    "kassa": "POS",
+    "reservations": "Reservations",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "login": "Log in",
+    "startFree": "Start free",
+    "menuAria": "Menu"
+  },
+  "languageSelector": {
+    "ariaLabel": "Choose language"
+  },
+  "hero": {
+    "imageAlt": "Restaurant dining room with set tables, online ordering with Vysion Order",
+    "title": "More online orders. Less hassle.",
+    "ctaTrial": "Start free trial",
+    "ctaFeatures": "View features",
+    "subtitle": "The most professional online ordering system on the market, with no transaction fees",
+    "ctaLive": "Try it live"
+  },
+  "googleReviews": {
+    "ariaLabel": "Read our Google reviews",
+    "label": "5 stars on Google"
+  },
+  "about": {
+    "eyebrow": "A complete",
+    "title": "Ordering platform at 0% commission",
+    "intro": "{siteName} connects webshop, pickup and delivery to your kitchen and POS — one flow for every venue on the platform.",
+    "ctaTrial": "Start free trial",
+    "features": {
+      "pickupDelivery": {
+        "title": "Pickup & delivery",
+        "body": "Manage pickup and delivery orders in one dashboard: time slots, status and kitchen screen, with no commission per order."
+      },
+      "groupOrders": {
+        "title": "Group orders",
+        "body": "Companies, schools or clubs order separately on one link. You keep overview; everyone pays as agreed."
+      },
+      "qrOrder": {
+        "title": "Order via QR code",
+        "body": "QR at the table or in the queue: guests scan, order and pay themselves. More time for service in your venue."
+      },
+      "loyalty": {
+        "title": "Loyalty card",
+        "body": "Stamps and rewards are built into the platform — no separate loyalty subscription. Easy for you, great for regulars."
+      }
+    },
+    "slider": {
+      "prev": "Previous phone image",
+      "next": "Next phone image",
+      "slideOf": "Image {current} of {total}",
+      "slides": {
+        "0": "{siteName} menu on smartphone",
+        "1": "Add product to order",
+        "2": "Choose options for fries special",
+        "3": "Select sauces and extras",
+        "4": "Checkout in the webshop",
+        "5": "Order received confirmation"
+      }
+    }
+  },
+  "features": {
+    "eyebrow": "Features",
+    "title": "You do what you love: delight people with great food — we handle the rest.",
+    "subtitle": "We have proven it at many hospitality businesses: 30% more orders and revenue, without the hassle.",
+    "imageAlt": "Hospitality service with online orders on the platform",
+    "cta": "Create account →",
+    "items": {
+      "webshop": {
+        "title": "Webshop & pickup",
+        "body": "Customers order online for pickup or delivery — menu, time slots and payment in one flow."
+      },
+      "adminKitchen": {
+        "title": "Admin & kitchen",
+        "body": "Orders arrive on the kitchen screen and in your admin; statuses sync with the POS."
+      },
+      "ownWebsite": {
+        "title": "Your own website",
+        "body": "Free website in your branding, colours and custom domain. Already have a site? Add the order button to your website."
+      },
+      "noCommission": {
+        "title": "No commission",
+        "body": "Fixed monthly fee. No percentage on revenue through the ordering platform."
+      },
+      "multilingual": {
+        "title": "Multilingual",
+        "body": "Guests order in 9 languages — menu and checkout automatically in your customer's language, without separate translations."
+      },
+      "posLink": {
+        "title": "POS integration",
+        "body": "Connect the online ordering platform to your POS: online orders, tickets and status in one flow, independent of your current POS vendor."
+      }
+    }
+  },
+  "mission": {
+    "eyebrow": "All in one package",
+    "title": "What's included",
+    "subtitle": "One online ordering platform with everything your business needs — no extra modules to buy.",
+    "included": {
+      "onlinePlatform": "Online ordering platform",
+      "freeWebsite": "Free website",
+      "whatsapp": "WhatsApp orders",
+      "loyalty": "Loyalty card",
+      "groupOrders": "Group orders",
+      "tableReservation": "Online table reservation",
+      "posLink": "POS integration",
+      "giftVouchers": "Gift vouchers",
+      "labelPrint": "Label printing software",
+      "qrMenu": "QR code menu",
+      "qrReviews": "QR code reviews",
+      "googleLink": "Google integration",
+      "menuEditor": "Customisable menu",
+      "payments": "All payment methods",
+      "notifications": "Push notifications and emails",
+      "promotions": "Customer promotions",
+      "channels": "Pickup, delivery & on-site"
+    }
+  },
+  "promoInstall": {
+    "eyebrow": "Free setup",
+    "title": "What do we do?",
+    "introBefore": "We set up your online ordering platform — menu, payments, website and visibility. Setup",
+    "introAfter": ".",
+    "services": {
+      "launch": "We launch your complete online platform.",
+      "menuPhotos": "We upload your full menu to your platform in 4K photos.",
+      "payments": "We configure your payments.",
+      "website": "We build your website the way you want it.",
+      "seo": "We take care of SEO visibility on Google."
+    },
+    "boxLabel": "One-time setup",
+    "boxNote": "No setup invoice at start.",
+    "ctaTrial": "Start free trial",
+    "ctaLive": "Try it live"
+  },
+  "pricing": {
+    "title": "One simple price",
+    "subtitle": "Everything for online ordering. No surprises.",
+    "trialNote": "14-day free trial · No credit card required · Cancel monthly",
+    "vatNote": "All prices excl. VAT.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "yearlyDiscount": "-10%",
+    "yearlySaving": "You save 10% with an annual subscription.",
+    "planName": "Vysion Order",
+    "perMonth": "/month",
+    "perYear": "/year",
+    "equivalentMonthly": "= €{amount}/month",
+    "ctaTrial": "Start free trial",
+    "cancelAnytime": "Cancel monthly",
+    "features": {
+      "platform": "Online ordering platform & webshop",
+      "pickupDelivery": "Pickup and delivery",
+      "menuAllergens": "Menu, categories & allergens",
+      "kitchen": "Kitchen screen & order status",
+      "posOptional": "Vysion POS integration (optional)",
+      "stripe": "Payment terminal / Stripe",
+      "branding": "Your own website in your branding",
+      "multilingual": "Multilingual for guests",
+      "support": "Email & phone support",
+      "qrShop": "QR code to your shop",
+      "promoCodes": "Promotions & discount codes",
+      "noCommission": "No commission per order"
+    }
+  },
+  "mobileOrdering": {
+    "imageAlt": "Manage orders on a laptop from home on the sofa",
+    "title": "Manage orders wherever you are.",
+    "body": "In your venue, on the terrace or at home: open your admin on phone, tablet or laptop and track online orders, status and revenue wherever you are. Update your website anywhere, as long as you have internet."
+  },
+  "demoLive": {
+    "title": "Want to see the platform in action?",
+    "body": "Click the link, try our demo and see the speed and professionalism of our ordering platform.",
+    "cta": "View live demo →",
+    "hint": "Demo: order as a guest, no account needed."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": {
+      "needPos": {
+        "q": "Do I need a full POS system?",
+        "a": "No. Vysion Order works standalone. Want POS and kitchen too? That is possible within the same Vysion account."
+      },
+      "cost": {
+        "q": "What does it cost?",
+        "a": "€49 per month excl. VAT. No commission on orders. Cancel monthly."
+      },
+      "login": {
+        "q": "Where do I log in after registration?",
+        "a": "Via Log in on {officialHost}; you are redirected to the platform with your tenant."
+      },
+      "website": {
+        "q": "Can I link my existing website?",
+        "a": "Yes. Link a button on your site to your personal shop URL (tenant.ordervysion.com). No iframe required."
+      },
+      "multiTenant": {
+        "q": "Does this work for multiple venues?",
+        "a": "Each venue has its own tenant; the platform is multi-tenant and suitable for many locations."
+      },
+      "installCost": {
+        "q": "Do I have to pay setup fees?",
+        "a": "No. You register online and start your trial."
+      },
+      "contract": {
+        "q": "Do I need an annual contract?",
+        "a": "No. Pay monthly and cancel anytime."
+      },
+      "start": {
+        "q": "How do I get started?",
+        "a": "Register via Start free; you go to {registerHost} with the online ordering product line."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What our customers say",
+    "items": {
+      "nolim": {
+        "tagline": "More than €600 saved per month",
+        "quote": "We used another app and had to give a percentage on every order, so we lost a large amount at the end of each month. Then we switched to Vysion Order and save more than €600 per month.",
+        "photoAlt": "Interior of Frituur Nolim in Pelt"
+      },
+      "lies": {
+        "tagline": "€49 per month, €0 setup",
+        "quote": "We asked prices from another platform nearby: €119 per month and €550 setup. We contacted Vysion Order and now have a platform that works very fast and flawlessly for €49 per month, without a single euro in setup costs.",
+        "photoAlt": "Bar Lies with terrace in Opglabeek"
+      },
+      "blonkys": {
+        "tagline": "Everything tailored to our wishes",
+        "quote": "We tested many platforms and always missed a module we wanted. We called Vysion and a few days later everything was adapted to our wishes. Incredible service!",
+        "photoAlt": "Eethuis Blonkys in Dordrecht"
+      }
+    }
+  },
+  "footer": {
+    "addressLabel": "Address:",
+    "officialSite": "{siteName}, official website",
+    "productNav": "Product",
+    "featuresLink": "Features & platform",
+    "pricingLink": "Pricing",
+    "companyNav": "Company",
+    "aboutLink": "About us",
+    "contact": "Contact",
+    "support": "Support",
+    "privacy": "Privacy",
+    "legal": "Legal",
+    "copyright": "© {year} Vysion Group. All rights reserved.",
+    "design": "Design by Vysion"
+  }
+}

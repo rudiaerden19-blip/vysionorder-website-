@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Providers from '@/components/Providers'
 import { OFFICIAL_SITE_URL, SITE_NAME } from '@/lib/site'
 
 const inter = Inter({
@@ -76,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="nl">
       <body className={`${inter.variable} antialiased`}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

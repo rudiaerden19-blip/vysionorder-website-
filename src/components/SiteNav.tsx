@@ -6,27 +6,32 @@ import {
   LOGIN_PATH,
   MAIN_PLATFORM_URL,
   OFFICIAL_SITE_URL,
-  REGISTER_URL,
+  platformRegisterUrl,
   SITE_NAME,
   TABLEVYSION_SITE_URL,
 } from '@/lib/site'
-
-const productLinks = [
-  { href: OFFICIAL_SITE_URL, label: 'Online bestelplatform' },
-  { href: MAIN_PLATFORM_URL, label: 'Kassa' },
-  { href: TABLEVYSION_SITE_URL, label: 'Reserveringen' },
-] as const
-
-const localLinks = [
-  { href: '/#prijzen', label: 'Prijzen' },
-  { href: '/#faq', label: 'FAQ' },
-] as const
+import { useLanguage } from '@/i18n'
+import LanguageSelector from '@/components/LanguageSelector'
 
 const navLinkClass =
   'inline-flex min-h-11 items-center rounded-lg px-3 py-2 text-gray-300 hover:text-white transition-colors'
 
 export default function SiteNav() {
   const [open, setOpen] = useState(false)
+  const { t, locale } = useLanguage()
+
+  const productLinks = [
+    { href: OFFICIAL_SITE_URL, label: t('nav.onlinePlatform') },
+    { href: MAIN_PLATFORM_URL, label: t('nav.kassa') },
+    { href: TABLEVYSION_SITE_URL, label: t('nav.reservations') },
+  ] as const
+
+  const localLinks = [
+    { href: '/#prijzen', label: t('nav.pricing') },
+    { href: '/#faq', label: t('nav.faq') },
+  ] as const
+
+  const registerUrl = platformRegisterUrl(locale)
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-dark/95 backdrop-blur-sm">
@@ -48,23 +53,24 @@ export default function SiteNav() {
               </Link>
             ))}
             <Link href={LOGIN_PATH} className={navLinkClass}>
-              Inloggen
+              {t('nav.login')}
             </Link>
           </div>
 
           <div className="hidden md:flex items-center gap-3">
+            <LanguageSelector />
             <a
-              href={REGISTER_URL}
+              href={registerUrl}
               className="inline-flex items-center justify-center rounded-md bg-accent hover:bg-accent/90 text-white text-sm font-semibold px-4 py-2.5 shadow-home-btn transition-colors"
             >
-              Start gratis
+              {t('nav.startFree')}
             </a>
           </div>
 
           <button
             type="button"
             className="md:hidden text-white p-2"
-            aria-label="Menu"
+            aria-label={t('nav.menuAria')}
             onClick={() => setOpen(!open)}
           >
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,6 +85,9 @@ export default function SiteNav() {
 
         {open && (
           <div className="md:hidden pb-4 space-y-1">
+            <div className="px-3 py-2">
+              <LanguageSelector />
+            </div>
             {productLinks.map((l) => (
               <a
                 key={l.href}
@@ -104,14 +113,14 @@ export default function SiteNav() {
               className="block py-3 px-3 rounded-lg text-white font-medium hover:bg-white/10"
               onClick={() => setOpen(false)}
             >
-              Inloggen
+              {t('nav.login')}
             </Link>
             <a
-              href={REGISTER_URL}
+              href={registerUrl}
               className="block mt-2 text-center rounded-full bg-accent text-white font-semibold py-3 shadow-home-btn"
               onClick={() => setOpen(false)}
             >
-              Start gratis
+              {t('nav.startFree')}
             </a>
           </div>
         )}

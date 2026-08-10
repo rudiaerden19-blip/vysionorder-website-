@@ -1,0 +1,251 @@
+{
+  "nav": {
+    "onlinePlatform": "Online-Bestellplattform",
+    "kassa": "Kasse",
+    "reservations": "Reservierungen",
+    "pricing": "Preise",
+    "faq": "FAQ",
+    "login": "Anmelden",
+    "startFree": "Gratis starten",
+    "menuAria": "Menü"
+  },
+  "languageSelector": {
+    "ariaLabel": "Sprache wählen"
+  },
+  "hero": {
+    "imageAlt": "Restaurant mit gedeckten Tischen, Online-Bestellung mit Vysion Order",
+    "title": "Mehr Online-Bestellungen. Weniger Aufwand.",
+    "ctaTrial": "Gratis testen",
+    "ctaFeatures": "Funktionen ansehen",
+    "subtitle": "Das professionellste Online-Bestellsystem am Markt — ohne Transaktionsgebühren",
+    "ctaLive": "Live ausprobieren"
+  },
+  "googleReviews": {
+    "ariaLabel": "Unsere Google-Bewertungen lesen",
+    "label": "5 Sterne auf Google"
+  },
+  "about": {
+    "eyebrow": "Eine komplette",
+    "title": "Bestellplattform mit 0 % Provision",
+    "intro": "{siteName} verbindet Webshop, Abholung und Lieferung mit Küche und Kasse — ein Ablauf für jedes Lokal auf der Plattform.",
+    "ctaTrial": "Gratis testen",
+    "features": {
+      "pickupDelivery": {
+        "title": "Abholung & Lieferung",
+        "body": "Abhol- und Lieferbestellungen in einem Dashboard: Zeitfenster, Status und Küchenbildschirm — ohne Provision pro Bestellung."
+      },
+      "groupOrders": {
+        "title": "Gruppenbestellungen",
+        "body": "Firmen, Schulen oder Vereine bestellen getrennt über einen Link. Sie behalten den Überblick; jeder zahlt wie vereinbart."
+      },
+      "qrOrder": {
+        "title": "Bestellen per QR-Code",
+        "body": "QR am Tisch oder in der Warteschlange: Gäste scannen, bestellen und zahlen selbst. Mehr Zeit für Service im Lokal."
+      },
+      "loyalty": {
+        "title": "Kundenkarte",
+        "body": "Stempel und Prämien sind in der Plattform enthalten — kein separates Loyalty-Abo. Einfach für Sie, attraktiv für Stammgäste."
+      }
+    },
+    "slider": {
+      "prev": "Vorheriges Telefonbild",
+      "next": "Nächstes Telefonbild",
+      "slideOf": "Bild {current} von {total}",
+      "slides": {
+        "0": "{siteName}-Menü auf dem Smartphone",
+        "1": "Produkt zur Bestellung hinzufügen",
+        "2": "Optionen bei Frites Special wählen",
+        "3": "Saucen und Extras auswählen",
+        "4": "Bezahlen im Webshop",
+        "5": "Bestellbestätigung erhalten"
+      }
+    }
+  },
+  "features": {
+    "eyebrow": "Funktionen",
+    "title": "Sie machen, was Sie lieben: Gäste mit gutem Essen verwöhnen — den Rest erledigen wir.",
+    "subtitle": "Bei vielen Gastronomiebetrieben bewiesen: 30 % mehr Bestellungen und Umsatz — ohne Umstände.",
+    "imageAlt": "Gastronomie-Service mit Online-Bestellungen auf der Plattform",
+    "cta": "Konto erstellen →",
+    "items": {
+      "webshop": {
+        "title": "Webshop & Abholung",
+        "body": "Kunden bestellen online zur Abholung oder Lieferung — Menü, Zeitfenster und Zahlung in einem Ablauf."
+      },
+      "adminKitchen": {
+        "title": "Admin & Küche",
+        "body": "Bestellungen kommen auf den Küchenbildschirm und in Ihr Admin; Status synchronisiert mit der Kasse."
+      },
+      "ownWebsite": {
+        "title": "Eigene Website",
+        "body": "Kostenlose Website in Ihrem Design, Farben und eigener Domain. Schon eine Website? Integrieren Sie den Bestellbutton."
+      },
+      "noCommission": {
+        "title": "Keine Provision",
+        "body": "Fester Monatspreis. Kein Prozentsatz auf den Umsatz über die Bestellplattform."
+      },
+      "multilingual": {
+        "title": "Mehrsprachig",
+        "body": "Gäste bestellen in 9 Sprachen — Menü und Checkout automatisch in der Sprache des Kunden, ohne separate Übersetzungen."
+      },
+      "posLink": {
+        "title": "Kassen-Anbindung",
+        "body": "Verbinden Sie die Online-Bestellplattform mit Ihrer Kasse: Online-Bestellungen, Bons und Status in einem Ablauf — unabhängig vom Kassenanbieter."
+      }
+    }
+  },
+  "mission": {
+    "eyebrow": "Alles in einem Paket",
+    "title": "Was enthalten ist",
+    "subtitle": "Eine Online-Bestellplattform mit allem, was Ihr Betrieb braucht — ohne Zusatzmodule.",
+    "included": {
+      "onlinePlatform": "Online-Bestellplattform",
+      "freeWebsite": "Kostenlose Website",
+      "whatsapp": "WhatsApp-Bestellungen",
+      "loyalty": "Kundenkarte",
+      "groupOrders": "Gruppenbestellungen",
+      "tableReservation": "Online-Tischreservierung",
+      "posLink": "Kassen-Anbindung",
+      "giftVouchers": "Geschenkgutscheine",
+      "labelPrint": "Etikettendruck-Software",
+      "qrMenu": "QR-Code-Menü",
+      "qrReviews": "QR-Code-Bewertungen",
+      "googleLink": "Google-Anbindung",
+      "menuEditor": "Anpassbare Speisekarte",
+      "payments": "Alle Zahlungsmethoden",
+      "notifications": "Push-Nachrichten und E-Mails",
+      "promotions": "Kundenaktionen",
+      "channels": "Abholung, Lieferung & vor Ort"
+    }
+  },
+  "promoInstall": {
+    "eyebrow": "Kostenlose Einrichtung",
+    "title": "Was machen wir?",
+    "introBefore": "Wir richten Ihre Online-Bestellplattform ein — Menü, Zahlungen, Website und Sichtbarkeit. Einrichtung",
+    "introAfter": ".",
+    "services": {
+      "launch": "Wir starten Ihre komplette Online-Plattform.",
+      "menuPhotos": "Wir stellen Ihr vollständiges Menü in 4K-Fotos auf der Plattform ein.",
+      "payments": "Wir richten Ihre Zahlungen ein.",
+      "website": "Wir bauen Ihre Website nach Ihren Wünschen.",
+      "seo": "Wir kümmern uns um SEO-Sichtbarkeit bei Google."
+    },
+    "boxLabel": "Einmalige Einrichtung",
+    "boxNote": "Keine Setup-Rechnung beim Start.",
+    "ctaTrial": "Gratis testen",
+    "ctaLive": "Live ausprobieren"
+  },
+  "pricing": {
+    "title": "Ein einfacher Preis",
+    "subtitle": "Alles für Online-Bestellungen. Keine Überraschungen.",
+    "trialNote": "14 Tage gratis testen · Keine Kreditkarte · Monatlich kündbar",
+    "vatNote": "Alle Preise zzgl. MwSt.",
+    "monthly": "Monatlich",
+    "yearly": "Jährlich",
+    "yearlyDiscount": "-10%",
+    "yearlySaving": "Sie sparen 10 % mit einem Jahresabo.",
+    "planName": "Vysion Order",
+    "perMonth": "/Monat",
+    "perYear": "/Jahr",
+    "equivalentMonthly": "= €{amount}/Monat",
+    "ctaTrial": "Gratis testen",
+    "cancelAnytime": "Monatlich kündbar",
+    "features": {
+      "platform": "Online-Bestellplattform & Webshop",
+      "pickupDelivery": "Abholung und Lieferung",
+      "menuAllergens": "Menü, Kategorien & Allergene",
+      "kitchen": "Küchenbildschirm & Bestellstatus",
+      "posOptional": "Anbindung Vysion-Kasse (optional)",
+      "stripe": "Zahlterminal / Stripe",
+      "branding": "Eigene Website in Ihrem Design",
+      "multilingual": "Mehrsprachig für Gäste",
+      "support": "E-Mail- & Telefon-Support",
+      "qrShop": "QR-Code zu Ihrem Shop",
+      "promoCodes": "Aktionen & Rabattcodes",
+      "noCommission": "Keine Provision pro Bestellung"
+    }
+  },
+  "mobileOrdering": {
+    "imageAlt": "Bestellungen auf dem Laptop von zu Hause verwalten",
+    "title": "Bestellungen verwalten — überall.",
+    "body": "Im Lokal, auf der Terrasse oder zu Hause: Admin auf Handy, Tablet oder Laptop öffnen und Online-Bestellungen, Status und Umsatz verfolgen. Website anpassen — überall mit Internet."
+  },
+  "demoLive": {
+    "title": "Die Plattform in Aktion sehen?",
+    "body": "Link anklicken, unsere Demo testen und Geschwindigkeit sowie Professionalität unserer Bestellplattform erleben.",
+    "cta": "Live-Demo ansehen →",
+    "hint": "Demo: als Gast bestellen, kein Konto nötig."
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "items": {
+      "needPos": {
+        "q": "Brauche ich eine vollständige Kasse?",
+        "a": "Nein. Vysion Order funktioniert eigenständig. Kasse und Küche dazu? Das geht im selben Vysion-Konto."
+      },
+      "cost": {
+        "q": "Was kostet es?",
+        "a": "49 € pro Monat zzgl. MwSt. Keine Provision auf Bestellungen. Monatlich kündbar."
+      },
+      "login": {
+        "q": "Wo melde ich mich nach der Registrierung an?",
+        "a": "Über Anmelden auf {officialHost}; Sie werden mit Ihrem Tenant zur Plattform weitergeleitet."
+      },
+      "website": {
+        "q": "Kann ich meine bestehende Website verknüpfen?",
+        "a": "Ja. Verlinken Sie einen Button auf Ihrer Site mit Ihrer Shop-URL (tenant.ordervysion.com). Kein iframe nötig."
+      },
+      "multiTenant": {
+        "q": "Funktioniert das für mehrere Betriebe?",
+        "a": "Jeder Betrieb hat einen eigenen Tenant; die Plattform ist multi-tenant und für viele Standorte geeignet."
+      },
+      "installCost": {
+        "q": "Muss ich Installationskosten zahlen?",
+        "a": "Nein. Sie registrieren sich online und starten Ihre Testphase."
+      },
+      "contract": {
+        "q": "Brauche ich einen Jahresvertrag?",
+        "a": "Nein. Monatlich zahlen und jederzeit kündigen."
+      },
+      "start": {
+        "q": "Wie starte ich?",
+        "a": "Registrieren über Gratis starten; Sie gelangen zu {registerHost} mit der Produktlinie Online-Bestellung."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Was unsere Kunden sagen",
+    "items": {
+      "nolim": {
+        "tagline": "Mehr als 600 € pro Monat gespart",
+        "quote": "Wir hatten eine andere App und mussten pro Bestellung einen Prozentsatz abgeben — am Monatsende fehlte uns viel Geld. Mit Vysion Order sparen wir über 600 € pro Monat.",
+        "photoAlt": "Innenraum Frituur Nolim in Pelt"
+      },
+      "lies": {
+        "tagline": "49 € pro Monat, 0 € Einrichtung",
+        "quote": "Bei einer anderen Plattform: 119 € pro Monat und 550 € Einrichtung. Vysion Order kontaktiert — jetzt eine schnelle, fehlerfreie Plattform für 49 € pro Monat, ohne einen Euro Einrichtungskosten.",
+        "photoAlt": "Bar Lies mit Terrasse in Opglabeek"
+      },
+      "blonkys": {
+        "tagline": "Alles nach unseren Wünschen",
+        "quote": "Viele Plattformen getestet — immer fehlte ein Modul. Vysion angerufen, wenige Tage später alles angepasst. Unglaublicher Service!",
+        "photoAlt": "Eethuis Blonkys in Dordrecht"
+      }
+    }
+  },
+  "footer": {
+    "addressLabel": "Adresse:",
+    "officialSite": "{siteName}, offizielle Website",
+    "productNav": "Produkt",
+    "featuresLink": "Funktionen & Plattform",
+    "pricingLink": "Preise",
+    "companyNav": "Unternehmen",
+    "aboutLink": "Über uns",
+    "contact": "Kontakt",
+    "support": "Support",
+    "privacy": "Datenschutz",
+    "legal": "Rechtliches",
+    "copyright": "© {year} Vysion Group. Alle Rechte vorbehalten.",
+    "design": "Design by Vysion"
+  }
+}

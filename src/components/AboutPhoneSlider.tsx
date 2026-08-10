@@ -1,16 +1,17 @@
 'use client'
 
 import Image from 'next/image'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { SITE_NAME } from '@/lib/site'
+import { useLanguage } from '@/i18n'
 
-const SLIDES = [
-  { src: '/images/about-phone/slide-0.png', alt: `${SITE_NAME} menu op smartphone` },
-  { src: '/images/about-phone/slide-1.png', alt: 'Product toevoegen aan bestelling' },
-  { src: '/images/about-phone/slide-2.png', alt: 'Opties kiezen bij friet special' },
-  { src: '/images/about-phone/slide-3.png', alt: 'Sauzen en extras selecteren' },
-  { src: '/images/about-phone/slide-4.png', alt: 'Afrekenen in de webshop' },
-  { src: '/images/about-phone/slide-5.png', alt: 'Bestelling ontvangen bevestiging' },
+const SLIDE_SRC = [
+  '/images/about-phone/slide-0.png',
+  '/images/about-phone/slide-1.png',
+  '/images/about-phone/slide-2.png',
+  '/images/about-phone/slide-3.png',
+  '/images/about-phone/slide-4.png',
+  '/images/about-phone/slide-5.png',
 ] as const
 
 const SLIDE_MS = 3000
@@ -49,11 +50,21 @@ function NavArrow({
 }
 
 export default function AboutPhoneSlider({ className = '' }: { className?: string }) {
+  const { t } = useLanguage()
+  const slides = useMemo(
+    () =>
+      SLIDE_SRC.map((src, i) => ({
+        src,
+        alt: t(`about.slider.slides.${i}`, { siteName: SITE_NAME }),
+      })),
+    [t],
+  )
+
   const [index, setIndex] = useState(0)
   const [visible, setVisible] = useState(true)
   const fadeTimeoutRef = useRef<number | null>(null)
-  const total = SLIDES.length
-  const slide = SLIDES[index]
+  const total = slides.length
+  const slide = slides[index]
 
   const clearFadeTimeout = useCallback(() => {
     if (fadeTimeoutRef.current !== null) {
@@ -88,7 +99,7 @@ export default function AboutPhoneSlider({ className = '' }: { className?: strin
 
   return (
     <div className={`flex w-full max-w-[min(100%,30rem)] items-center justify-center gap-1.5 sm:gap-2 ${className}`}>
-      <NavArrow direction="prev" onClick={goPrev} label="Vorige telefoonafbeelding" />
+      <NavArrow direction="prev" onClick={goPrev} label={t('about.slider.prev')} />
       <div className="relative min-w-0 flex-1">
         <Image
           src={slide.src}
@@ -100,10 +111,10 @@ export default function AboutPhoneSlider({ className = '' }: { className?: strin
           priority={index === 0}
         />
         <p className="sr-only">
-          Afbeelding {index + 1} van {total}
+          {t('about.slider.slideOf', { current: String(index + 1), total: String(total) })}
         </p>
       </div>
-      <NavArrow direction="next" onClick={goNext} label="Volgende telefoonafbeelding" />
+      <NavArrow direction="next" onClick={goNext} label={t('about.slider.next')} />
     </div>
   )
 }

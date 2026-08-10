@@ -1,6 +1,11 @@
+'use client'
+
 import Image from 'next/image'
+import { useLanguage } from '@/i18n'
 
 export default function MobileOrderingSection() {
+  const { t } = useLanguage()
+
   return (
     <section
       id="overal-bereikbaar"
@@ -10,7 +15,7 @@ export default function MobileOrderingSection() {
         <div className="relative aspect-[3/2] min-h-[14rem] w-full overflow-hidden rounded-3xl shadow-home-photo ring-1 ring-black/5 sm:min-h-[16rem] lg:aspect-[4/3]">
           <Image
             src="/images/mobile-ordering-laptop.jpg"
-            alt="Bestellingen beheren op laptop thuis in de zetel"
+            alt={t('mobileOrdering.imageAlt')}
             fill
             className="object-cover object-center"
             sizes="(max-width: 1023px) 100vw, 45vw"
@@ -18,12 +23,9 @@ export default function MobileOrderingSection() {
         </div>
         <div className="text-center lg:text-left">
           <h2 className="section-heading text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.35rem]">
-            Beheer bestellingen overal waar je bent.
+            {t('mobileOrdering.title')}
           </h2>
-          <p className="mt-5 text-lg leading-relaxed text-gray-600 sm:text-xl">
-            In de zaak, op het terras of thuis: open je admin op telefoon, tablet of laptop en volg online orders,
-            status en omzet, waar je ook bent. Pas je website aan waar je ook bent, zolang je internet hebt.
-          </p>
+          <p className="mt-5 text-lg leading-relaxed text-gray-600 sm:text-xl">{t('mobileOrdering.body')}</p>
         </div>
       </div>
     </section>

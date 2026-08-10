@@ -1,10 +1,14 @@
+'use client'
+
 import Link from 'next/link'
 import { MAIN_PLATFORM_URL, OFFICIAL_SITE_URL, SITE_NAME, TABLEVYSION_SITE_URL, WEBVYSION_SITE_URL } from '@/lib/site'
+import { useLanguage } from '@/i18n'
 
 const footerLinkClass = 'text-gray-400 hover:text-white transition-colors'
 
 export default function SiteFooter() {
   const year = new Date().getFullYear()
+  const { t } = useLanguage()
 
   return (
     <footer className="border-t border-white/10 bg-dark py-8 text-white sm:py-10" role="contentinfo">
@@ -13,7 +17,7 @@ export default function SiteFooter() {
           <div>
             <p className="text-xl font-bold text-accent">{SITE_NAME}</p>
             <address className="mt-4 not-italic text-sm leading-snug text-gray-400">
-              <span className="font-semibold text-white">Adres:</span>
+              <span className="font-semibold text-white">{t('footer.addressLabel')}</span>
               <br />
               Vysion Group International
               <br />
@@ -41,7 +45,7 @@ export default function SiteFooter() {
                 www.tablevysion.com
               </a>
               <a href={OFFICIAL_SITE_URL} className="font-medium text-accent hover:underline">
-                {SITE_NAME}, officiële website
+                {t('footer.officialSite', { siteName: SITE_NAME })}
               </a>
               <a
                 href={WEBVYSION_SITE_URL}
@@ -54,48 +58,48 @@ export default function SiteFooter() {
             </div>
           </div>
 
-          <nav aria-label="Product">
-            <p className="mb-2 font-semibold text-white">Product</p>
+          <nav aria-label={t('footer.productNav')}>
+            <p className="mb-2 font-semibold text-white">{t('footer.productNav')}</p>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/#functies" className={footerLinkClass}>
-                  Functies &amp; platform
+                  {t('footer.featuresLink')}
                 </Link>
               </li>
               <li>
                 <Link href="/#prijzen" className={footerLinkClass}>
-                  Prijzen
+                  {t('footer.pricingLink')}
                 </Link>
               </li>
             </ul>
           </nav>
 
-          <nav aria-label="Bedrijf">
-            <p className="mb-2 font-semibold text-white">Bedrijf</p>
+          <nav aria-label={t('footer.companyNav')}>
+            <p className="mb-2 font-semibold text-white">{t('footer.companyNav')}</p>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/#over-ons" className={footerLinkClass}>
-                  Over ons
+                  {t('footer.aboutLink')}
                 </Link>
               </li>
               <li>
                 <a href={`${MAIN_PLATFORM_URL}/#contact`} className={footerLinkClass}>
-                  Contact
+                  {t('footer.contact')}
                 </a>
               </li>
               <li>
                 <a href={`${MAIN_PLATFORM_URL}/support`} className={footerLinkClass}>
-                  Support
+                  {t('footer.support')}
                 </a>
               </li>
               <li>
                 <a href={`${MAIN_PLATFORM_URL}/privacy`} className={footerLinkClass}>
-                  Privacy
+                  {t('footer.privacy')}
                 </a>
               </li>
               <li>
                 <a href={`${MAIN_PLATFORM_URL}/juridisch`} className={footerLinkClass}>
-                  Juridisch
+                  {t('footer.legal')}
                 </a>
               </li>
             </ul>
@@ -103,8 +107,8 @@ export default function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-2 border-t border-white/10 pt-5 text-sm text-gray-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} Vysion Group. Alle rechten voorbehouden.</p>
-          <p>Design by Vysion</p>
+          <p>{t('footer.copyright', { year: String(year) })}</p>
+          <p>{t('footer.design')}</p>
         </div>
       </div>
     </footer>

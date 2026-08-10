@@ -1,21 +1,25 @@
-const included = [
-  'Online bestelplatform',
-  'Gratis website',
-  'WhatsApp-bestellingen',
-  'Klantenkaart',
-  'Groepsbestellingen',
-  'Online tafelreservatie',
-  'Kassa-koppeling',
-  'Cadeaubonnen',
-  'Labelprintsoftware',
-  'QR-code menu',
-  'QR-code reviews',
-  'Koppeling met Google',
-  'Aanpasbare menukaart',
-  'Alle betaalmethodes',
-  'Pushberichten en e-mails',
-  'Promoties voor klanten',
-  'Afhalen, levering & ter plaatse',
+'use client'
+
+import { useLanguage } from '@/i18n'
+
+const includedKeys = [
+  'onlinePlatform',
+  'freeWebsite',
+  'whatsapp',
+  'loyalty',
+  'groupOrders',
+  'tableReservation',
+  'posLink',
+  'giftVouchers',
+  'labelPrint',
+  'qrMenu',
+  'qrReviews',
+  'googleLink',
+  'menuEditor',
+  'payments',
+  'notifications',
+  'promotions',
+  'channels',
 ] as const
 
 function CheckIcon() {
@@ -27,6 +31,8 @@ function CheckIcon() {
 }
 
 export default function MissionSection() {
+  const { t } = useLanguage()
+
   return (
     <section id="inbegrepen" className="relative scroll-mt-24 overflow-hidden py-20 sm:py-24 lg:py-28">
       <div
@@ -37,19 +43,17 @@ export default function MissionSection() {
       <div className="absolute inset-0 bg-black/65" aria-hidden />
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 text-center sm:mb-12">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-accent sm:text-base">Alles in één pakket</p>
-          <h2 className="section-heading text-3xl font-bold drop-shadow-sm sm:text-4xl">Wat is inbegrepen</h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-gray-200">
-            Eén online bestelplatform met alles wat je zaak nodig heeft, zonder losse modules bijkopen.
-          </p>
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.14em] text-accent sm:text-base">{t('mission.eyebrow')}</p>
+          <h2 className="section-heading text-3xl font-bold drop-shadow-sm sm:text-4xl">{t('mission.title')}</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-gray-200">{t('mission.subtitle')}</p>
         </div>
 
         <div className="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur-md sm:p-8 lg:p-10">
           <ul className="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
-            {included.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-left">
+            {includedKeys.map((key) => (
+              <li key={key} className="flex items-start gap-3 text-left">
                 <CheckIcon />
-                <span className="text-base font-medium leading-snug text-white">{item}</span>
+                <span className="text-base font-medium leading-snug text-white">{t(`mission.included.${key}`)}</span>
               </li>
             ))}
           </ul>

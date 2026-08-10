@@ -1,0 +1,251 @@
+{
+  "nav": {
+    "onlinePlatform": "Plateforme de commande en ligne",
+    "kassa": "Caisse",
+    "reservations": "Réservations",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "login": "Connexion",
+    "startFree": "Commencer gratuitement",
+    "menuAria": "Menu"
+  },
+  "languageSelector": {
+    "ariaLabel": "Choisir la langue"
+  },
+  "hero": {
+    "imageAlt": "Salle de restaurant avec tables dressées, commande en ligne avec Vysion Order",
+    "title": "Plus de commandes en ligne. Moins de tracas.",
+    "ctaTrial": "Essai gratuit",
+    "ctaFeatures": "Voir les fonctionnalités",
+    "subtitle": "Le système de commande en ligne le plus professionnel du marché, sans frais de transaction",
+    "ctaLive": "Essayer en direct"
+  },
+  "googleReviews": {
+    "ariaLabel": "Lire nos avis Google",
+    "label": "5 étoiles sur Google"
+  },
+  "about": {
+    "eyebrow": "Une solution complète",
+    "title": "Plateforme de commande à 0 % de commission",
+    "intro": "{siteName} relie boutique en ligne, à emporter et livraison à votre cuisine et caisse — un flux unique pour chaque établissement sur la plateforme.",
+    "ctaTrial": "Essai gratuit",
+    "features": {
+      "pickupDelivery": {
+        "title": "À emporter & livraison",
+        "body": "Gérez les commandes à emporter et en livraison dans un seul tableau de bord : créneaux, statut et écran cuisine, sans commission par commande."
+      },
+      "groupOrders": {
+        "title": "Commandes groupées",
+        "body": "Entreprises, écoles ou associations commandent séparément via un seul lien. Vous gardez la vue d'ensemble ; chacun paie comme convenu."
+      },
+      "qrOrder": {
+        "title": "Commander via QR code",
+        "body": "QR à table ou en file d'attente : les clients scannent, commandent et paient eux-mêmes. Plus de temps pour le service en salle."
+      },
+      "loyalty": {
+        "title": "Carte de fidélité",
+        "body": "Tampons et récompenses sont inclus dans la plateforme — pas d'abonnement loyalty séparé. Simple pour vous, apprécié des habitués."
+      }
+    },
+    "slider": {
+      "prev": "Image précédente",
+      "next": "Image suivante",
+      "slideOf": "Image {current} sur {total}",
+      "slides": {
+        "0": "Menu {siteName} sur smartphone",
+        "1": "Ajouter un produit à la commande",
+        "2": "Choisir les options pour frites special",
+        "3": "Sélectionner sauces et extras",
+        "4": "Paiement dans la boutique en ligne",
+        "5": "Confirmation de commande reçue"
+      }
+    }
+  },
+  "features": {
+    "eyebrow": "Fonctionnalités",
+    "title": "Vous faites ce que vous aimez : régaler vos clients — nous gérons le reste.",
+    "subtitle": "Nous l'avons prouvé dans de nombreux établissements : 30 % de commandes et de chiffre d'affaires en plus, sans tracas.",
+    "imageAlt": "Service horeca avec commandes en ligne sur la plateforme",
+    "cta": "Créer un compte →",
+    "items": {
+      "webshop": {
+        "title": "Boutique & à emporter",
+        "body": "Les clients commandent en ligne à emporter ou en livraison — menu, créneaux et paiement en un seul flux."
+      },
+      "adminKitchen": {
+        "title": "Admin & cuisine",
+        "body": "Les commandes arrivent sur l'écran cuisine et dans votre admin ; les statuts se synchronisent avec la caisse."
+      },
+      "ownWebsite": {
+        "title": "Votre propre site",
+        "body": "Site gratuit aux couleurs de votre marque et domaine personnalisé. Vous avez déjà un site ? Intégrez le bouton de commande."
+      },
+      "noCommission": {
+        "title": "Sans commission",
+        "body": "Forfait mensuel fixe. Aucun pourcentage sur le chiffre d'affaires via la plateforme."
+      },
+      "multilingual": {
+        "title": "Multilingue",
+        "body": "Les clients commandent en 9 langues — menu et checkout automatiquement dans la langue du client, sans traductions séparées."
+      },
+      "posLink": {
+        "title": "Lien caisse",
+        "body": "Connectez la plateforme à votre caisse : commandes en ligne, tickets et statuts en un flux, indépendamment de votre fournisseur de caisse."
+      }
+    }
+  },
+  "mission": {
+    "eyebrow": "Tout en un seul pack",
+    "title": "Ce qui est inclus",
+    "subtitle": "Une plateforme de commande en ligne avec tout ce dont votre établissement a besoin — sans modules à acheter séparément.",
+    "included": {
+      "onlinePlatform": "Plateforme de commande en ligne",
+      "freeWebsite": "Site web gratuit",
+      "whatsapp": "Commandes WhatsApp",
+      "loyalty": "Carte de fidélité",
+      "groupOrders": "Commandes groupées",
+      "tableReservation": "Réservation de table en ligne",
+      "posLink": "Lien caisse",
+      "giftVouchers": "Chèques-cadeaux",
+      "labelPrint": "Logiciel d'impression d'étiquettes",
+      "qrMenu": "Menu QR code",
+      "qrReviews": "Avis QR code",
+      "googleLink": "Lien Google",
+      "menuEditor": "Carte modifiable",
+      "payments": "Tous les moyens de paiement",
+      "notifications": "Notifications push et e-mails",
+      "promotions": "Promotions clients",
+      "channels": "À emporter, livraison & sur place"
+    }
+  },
+  "promoInstall": {
+    "eyebrow": "Installation gratuite",
+    "title": "Que faisons-nous ?",
+    "introBefore": "Nous mettons en place votre plateforme — menu, paiements, site et visibilité. Installation",
+    "introAfter": ".",
+    "services": {
+      "launch": "Nous lançons votre plateforme en ligne complète.",
+      "menuPhotos": "Nous plaçons votre menu complet sur la plateforme en photos 4K.",
+      "payments": "Nous configurons vos paiements.",
+      "website": "Nous construisons votre site comme vous le souhaitez.",
+      "seo": "Nous assurons la visibilité SEO sur Google."
+    },
+    "boxLabel": "Installation unique",
+    "boxNote": "Pas de facture d'installation au démarrage.",
+    "ctaTrial": "Essai gratuit",
+    "ctaLive": "Essayer en direct"
+  },
+  "pricing": {
+    "title": "Un tarif simple",
+    "subtitle": "Tout pour commander en ligne. Sans surprises.",
+    "trialNote": "14 jours d'essai gratuit · Sans carte bancaire · Résiliable mensuellement",
+    "vatNote": "Tous les prix hors TVA.",
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "yearlyDiscount": "-10%",
+    "yearlySaving": "Vous économisez 10 % avec un abonnement annuel.",
+    "planName": "Vysion Order",
+    "perMonth": "/mois",
+    "perYear": "/an",
+    "equivalentMonthly": "= €{amount}/mois",
+    "ctaTrial": "Essai gratuit",
+    "cancelAnytime": "Résiliable mensuellement",
+    "features": {
+      "platform": "Plateforme & boutique en ligne",
+      "pickupDelivery": "À emporter et livraison",
+      "menuAllergens": "Menu, catégories & allergènes",
+      "kitchen": "Écran cuisine & statut commande",
+      "posOptional": "Lien caisse Vysion (optionnel)",
+      "stripe": "Terminal de paiement / Stripe",
+      "branding": "Site aux couleurs de votre marque",
+      "multilingual": "Multilingue pour les clients",
+      "support": "Support e-mail & téléphone",
+      "qrShop": "QR code vers votre shop",
+      "promoCodes": "Promotions & codes promo",
+      "noCommission": "Sans commission par commande"
+    }
+  },
+  "mobileOrdering": {
+    "imageAlt": "Gérer les commandes sur ordinateur portable depuis le canapé",
+    "title": "Gérez vos commandes où que vous soyez.",
+    "body": "En salle, en terrasse ou chez vous : ouvrez votre admin sur téléphone, tablette ou ordinateur et suivez commandes, statuts et chiffre d'affaires. Modifiez votre site partout, tant que vous avez internet."
+  },
+  "demoLive": {
+    "title": "Voir la plateforme en action ?",
+    "body": "Cliquez sur le lien, testez notre démo et découvrez la rapidité et le professionnalisme de notre plateforme.",
+    "cta": "Voir la démo en direct →",
+    "hint": "Démo : commandez en tant qu'invité, sans compte."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": {
+      "needPos": {
+        "q": "Ai-je besoin d'une caisse complète ?",
+        "a": "Non. Vysion Order fonctionne seul. Vous voulez aussi caisse et cuisine ? C'est possible dans le même compte Vysion."
+      },
+      "cost": {
+        "q": "Quel est le prix ?",
+        "a": "49 € par mois hors TVA. Pas de commission sur les commandes. Résiliable mensuellement."
+      },
+      "login": {
+        "q": "Où me connecter après l'inscription ?",
+        "a": "Via Connexion sur {officialHost} ; vous êtes redirigé vers la plateforme avec votre tenant."
+      },
+      "website": {
+        "q": "Puis-je lier mon site existant ?",
+        "a": "Oui. Liez un bouton sur votre site à votre URL shop personnelle (tenant.ordervysion.com). Pas d'iframe obligatoire."
+      },
+      "multiTenant": {
+        "q": "Cela fonctionne pour plusieurs établissements ?",
+        "a": "Chaque établissement a son propre tenant ; la plateforme est multi-tenant, adaptée à de nombreux sites."
+      },
+      "installCost": {
+        "q": "Dois-je payer des frais d'installation ?",
+        "a": "Non. Vous vous inscrivez en ligne et démarrez votre essai."
+      },
+      "contract": {
+        "q": "Ai-je un contrat annuel ?",
+        "a": "Non. Paiement mensuel et résiliation possible à tout moment."
+      },
+      "start": {
+        "q": "Comment démarrer ?",
+        "a": "Inscrivez-vous via Commencer gratuitement ; vous allez sur {registerHost} avec la ligne produit commande en ligne."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "items": {
+      "nolim": {
+        "tagline": "Plus de 600 € économisés par mois",
+        "quote": "Nous avions une autre app et devions céder un pourcentage par commande, ce qui nous faisait perdre une grosse somme en fin de mois. Puis nous sommes passés à Vysion Order et économisons plus de 600 € par mois.",
+        "photoAlt": "Intérieur de Frituur Nolim à Pelt"
+      },
+      "lies": {
+        "tagline": "49 € par mois, 0 € d'installation",
+        "quote": "Nous avions demandé des prix à une autre plateforme : 119 € par mois et 550 € d'installation. Nous avons contacté Vysion Order et avons maintenant une plateforme rapide et fiable pour 49 € par mois, sans un euro de frais d'installation.",
+        "photoAlt": "Bar Lies avec terrasse à Opglabeek"
+      },
+      "blonkys": {
+        "tagline": "Tout adapté à nos souhaits",
+        "quote": "Nous avons testé beaucoup de plateformes et il manquait toujours un module. Nous avons appelé Vysion et quelques jours plus tard tout était adapté. Un service incroyable !",
+        "photoAlt": "Eethuis Blonkys à Dordrecht"
+      }
+    }
+  },
+  "footer": {
+    "addressLabel": "Adresse :",
+    "officialSite": "{siteName}, site officiel",
+    "productNav": "Produit",
+    "featuresLink": "Fonctionnalités & plateforme",
+    "pricingLink": "Tarifs",
+    "companyNav": "Entreprise",
+    "aboutLink": "À propos",
+    "contact": "Contact",
+    "support": "Support",
+    "privacy": "Confidentialité",
+    "legal": "Mentions légales",
+    "copyright": "© {year} Vysion Group. Tous droits réservés.",
+    "design": "Design by Vysion"
+  }
+}
