@@ -42,7 +42,7 @@ export default function LandingHero() {
             {t('hero.ctaTrial')}
           </a>
           <Link
-            href="/#functies"
+            href="/#inbegrepen"
             className="inline-flex min-h-[48px] items-center justify-center rounded-full border-2 border-white/80 bg-black/25 px-8 py-3 text-base font-semibold text-white backdrop-blur-[2px] transition-colors hover:bg-black/40"
           >
             {t('hero.ctaFeatures')}
