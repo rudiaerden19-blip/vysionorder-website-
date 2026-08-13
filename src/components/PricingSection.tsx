@@ -4,24 +4,7 @@ import { useState } from 'react'
 import { platformRegisterUrl } from '@/lib/site'
 import { VYSION_ORDER_MONTHLY, displayPrice } from '@/lib/pricing'
 import { useLanguage } from '@/i18n'
-import { ORDER_INCLUDED_FEATURE_KEYS } from '@/lib/order-included-features'
-
-function FeatureCheck({ label }: { label: string }) {
-  return (
-    <li className="flex items-start gap-3">
-      <svg
-        className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-      </svg>
-      <span className="text-sm leading-snug text-gray-600 sm:text-base">{label}</span>
-    </li>
-  )
-}
+import IncludedFeaturesChecklist from '@/components/IncludedFeaturesChecklist'
 
 export default function PricingSection() {
   const [isYearly, setIsYearly] = useState(false)
@@ -89,11 +72,9 @@ export default function PricingSection() {
                   {t('pricing.equivalentMonthly', { amount: String(monthlyEquivalent) })}
                 </p>
               )}
-              <ul className="mb-8 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
-                {ORDER_INCLUDED_FEATURE_KEYS.map((key) => (
-                  <FeatureCheck key={key} label={t(`mission.included.${key}`)} />
-                ))}
-              </ul>
+              <div className="mb-8">
+                <IncludedFeaturesChecklist variant="pricing" />
+              </div>
               <a
                 href={registerUrl}
                 className="block w-full rounded-full bg-accent py-3.5 text-center font-semibold text-white transition-colors hover:bg-accent/90"

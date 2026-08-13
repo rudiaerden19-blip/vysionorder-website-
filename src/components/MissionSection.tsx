@@ -1,15 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/i18n'
-import { ORDER_INCLUDED_FEATURE_KEYS } from '@/lib/order-included-features'
-
-function CheckIcon() {
-  return (
-    <svg className="h-5 w-5 shrink-0 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-    </svg>
-  )
-}
+import IncludedFeaturesChecklist from '@/components/IncludedFeaturesChecklist'
 
 export default function MissionSection() {
   const { t } = useLanguage()
@@ -30,14 +22,7 @@ export default function MissionSection() {
         </div>
 
         <div className="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur-md sm:p-8 lg:p-10">
-          <ul className="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
-            {ORDER_INCLUDED_FEATURE_KEYS.map((key) => (
-              <li key={key} className="flex items-start gap-3 text-left">
-                <CheckIcon />
-                <span className="text-base font-medium leading-snug text-white">{t(`mission.included.${key}`)}</span>
-              </li>
-            ))}
-          </ul>
+          <IncludedFeaturesChecklist variant="mission" />
         </div>
       </div>
     </section>
