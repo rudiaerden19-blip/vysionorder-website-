@@ -115,7 +115,8 @@
       "payments": "Tous les moyens de paiement",
       "notifications": "Notifications push et e-mails",
       "promotions": "Promotions clients",
-      "channels": "À emporter, livraison & sur place"
+      "channels": "À emporter, livraison & sur place",
+      "noCommission": "Sans commission par commande"
     }
   },
   "promoInstall": {

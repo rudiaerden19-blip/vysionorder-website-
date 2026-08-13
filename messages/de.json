@@ -115,7 +115,8 @@
       "payments": "Alle Zahlungsmethoden",
       "notifications": "Push-Nachrichten und E-Mails",
       "promotions": "Kundenaktionen",
-      "channels": "Abholung, Lieferung & vor Ort"
+      "channels": "Abholung, Lieferung & vor Ort",
+      "noCommission": "Keine Provision pro Bestellung"
     }
   },
   "promoInstall": {

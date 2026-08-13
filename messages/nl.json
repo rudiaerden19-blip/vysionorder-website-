@@ -115,7 +115,8 @@
       "payments": "Alle betaalmethodes",
       "notifications": "Pushberichten en e-mails",
       "promotions": "Promoties voor klanten",
-      "channels": "Afhalen, levering & ter plaatse"
+      "channels": "Afhalen, levering & ter plaatse",
+      "noCommission": "Geen commissie per bestelling"
     }
   },
   "promoInstall": {

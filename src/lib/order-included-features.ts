@@ -17,6 +17,7 @@ export const ORDER_INCLUDED_FEATURE_KEYS = [
   'notifications',
   'promotions',
   'channels',
+  'noCommission',
 ] as const
 
 export type OrderIncludedFeatureKey = (typeof ORDER_INCLUDED_FEATURE_KEYS)[number]

@@ -115,7 +115,8 @@
       "payments": "All payment methods",
       "notifications": "Push notifications and emails",
       "promotions": "Customer promotions",
-      "channels": "Pickup, delivery & on-site"
+      "channels": "Pickup, delivery & on-site",
+      "noCommission": "No commission per order"
     }
   },
   "promoInstall": {
