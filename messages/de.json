@@ -149,21 +149,7 @@
     "perYear": "/Jahr",
     "equivalentMonthly": "= €{amount}/Monat",
     "ctaTrial": "Gratis testen",
-    "cancelAnytime": "Monatlich kündbar",
-    "features": {
-      "platform": "Online-Bestellplattform & Webshop",
-      "pickupDelivery": "Abholung und Lieferung",
-      "menuAllergens": "Menü, Kategorien & Allergene",
-      "kitchen": "Küchenbildschirm & Bestellstatus",
-      "posOptional": "Anbindung Vysion-Kasse (optional)",
-      "stripe": "Zahlterminal / Stripe",
-      "branding": "Eigene Website in Ihrem Design",
-      "multilingual": "Mehrsprachig für Gäste",
-      "support": "E-Mail- & Telefon-Support",
-      "qrShop": "QR-Code zu Ihrem Shop",
-      "promoCodes": "Aktionen & Rabattcodes",
-      "noCommission": "Keine Provision pro Bestellung"
-    }
+    "cancelAnytime": "Monatlich kündbar"
   },
   "mobileOrdering": {
     "imageAlt": "Bestellungen auf dem Laptop von zu Hause verwalten",

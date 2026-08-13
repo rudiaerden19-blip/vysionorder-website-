@@ -4,21 +4,7 @@ import { useState } from 'react'
 import { platformRegisterUrl } from '@/lib/site'
 import { VYSION_ORDER_MONTHLY, displayPrice } from '@/lib/pricing'
 import { useLanguage } from '@/i18n'
-
-const planFeatureKeys = [
-  'platform',
-  'pickupDelivery',
-  'menuAllergens',
-  'kitchen',
-  'posOptional',
-  'stripe',
-  'branding',
-  'multilingual',
-  'support',
-  'qrShop',
-  'promoCodes',
-  'noCommission',
-] as const
+import { ORDER_INCLUDED_FEATURE_KEYS } from '@/lib/order-included-features'
 
 function FeatureCheck({ label }: { label: string }) {
   return (
@@ -83,7 +69,7 @@ export default function PricingSection() {
           {isYearly && <p className="mt-3 text-sm text-gray-600">{t('pricing.yearlySaving')}</p>}
         </div>
 
-        <div className="mx-auto max-w-lg">
+        <div className="mx-auto max-w-2xl">
           <div className="overflow-hidden rounded-2xl border-2 border-gray-900 bg-white shadow-md transition-shadow hover:shadow-lg">
             <div className="p-6 lg:p-8">
               <div className="mb-5 flex items-center gap-3">
@@ -103,9 +89,9 @@ export default function PricingSection() {
                   {t('pricing.equivalentMonthly', { amount: String(monthlyEquivalent) })}
                 </p>
               )}
-              <ul className="mb-8 space-y-3">
-                {planFeatureKeys.map((key) => (
-                  <FeatureCheck key={key} label={t(`pricing.features.${key}`)} />
+              <ul className="mb-8 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
+                {ORDER_INCLUDED_FEATURE_KEYS.map((key) => (
+                  <FeatureCheck key={key} label={t(`mission.included.${key}`)} />
                 ))}
               </ul>
               <a

@@ -149,21 +149,7 @@
     "perYear": "/an",
     "equivalentMonthly": "= €{amount}/mois",
     "ctaTrial": "Essai gratuit",
-    "cancelAnytime": "Résiliable mensuellement",
-    "features": {
-      "platform": "Plateforme & boutique en ligne",
-      "pickupDelivery": "À emporter et livraison",
-      "menuAllergens": "Menu, catégories & allergènes",
-      "kitchen": "Écran cuisine & statut commande",
-      "posOptional": "Lien caisse Vysion (optionnel)",
-      "stripe": "Terminal de paiement / Stripe",
-      "branding": "Site aux couleurs de votre marque",
-      "multilingual": "Multilingue pour les clients",
-      "support": "Support e-mail & téléphone",
-      "qrShop": "QR code vers votre shop",
-      "promoCodes": "Promotions & codes promo",
-      "noCommission": "Sans commission par commande"
-    }
+    "cancelAnytime": "Résiliable mensuellement"
   },
   "mobileOrdering": {
     "imageAlt": "Gérer les commandes sur ordinateur portable depuis le canapé",

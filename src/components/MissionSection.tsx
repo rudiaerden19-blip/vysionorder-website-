@@ -1,26 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/i18n'
-
-const includedKeys = [
-  'onlinePlatform',
-  'freeWebsite',
-  'whatsapp',
-  'loyalty',
-  'groupOrders',
-  'tableReservation',
-  'posLink',
-  'giftVouchers',
-  'labelPrint',
-  'qrMenu',
-  'qrReviews',
-  'googleLink',
-  'menuEditor',
-  'payments',
-  'notifications',
-  'promotions',
-  'channels',
-] as const
+import { ORDER_INCLUDED_FEATURE_KEYS } from '@/lib/order-included-features'
 
 function CheckIcon() {
   return (
@@ -50,7 +31,7 @@ export default function MissionSection() {
 
         <div className="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur-md sm:p-8 lg:p-10">
           <ul className="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
-            {includedKeys.map((key) => (
+            {ORDER_INCLUDED_FEATURE_KEYS.map((key) => (
               <li key={key} className="flex items-start gap-3 text-left">
                 <CheckIcon />
                 <span className="text-base font-medium leading-snug text-white">{t(`mission.included.${key}`)}</span>

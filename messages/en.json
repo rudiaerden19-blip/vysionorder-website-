@@ -149,21 +149,7 @@
     "perYear": "/year",
     "equivalentMonthly": "= €{amount}/month",
     "ctaTrial": "Start free trial",
-    "cancelAnytime": "Cancel monthly",
-    "features": {
-      "platform": "Online ordering platform & webshop",
-      "pickupDelivery": "Pickup and delivery",
-      "menuAllergens": "Menu, categories & allergens",
-      "kitchen": "Kitchen screen & order status",
-      "posOptional": "Vysion POS integration (optional)",
-      "stripe": "Payment terminal / Stripe",
-      "branding": "Your own website in your branding",
-      "multilingual": "Multilingual for guests",
-      "support": "Email & phone support",
-      "qrShop": "QR code to your shop",
-      "promoCodes": "Promotions & discount codes",
-      "noCommission": "No commission per order"
-    }
+    "cancelAnytime": "Cancel monthly"
   },
   "mobileOrdering": {
     "imageAlt": "Manage orders on a laptop from home on the sofa",

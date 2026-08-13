@@ -149,21 +149,7 @@
     "perYear": "/jaar",
     "equivalentMonthly": "= €{amount}/maand",
     "ctaTrial": "Start gratis proefperiode",
-    "cancelAnytime": "Maandelijks opzegbaar",
-    "features": {
-      "platform": "Online bestelplatform & webshop",
-      "pickupDelivery": "Afhalen en levering",
-      "menuAllergens": "Menu, categorieën & allergenen",
-      "kitchen": "Keukenscherm & orderstatus",
-      "posOptional": "Koppeling met Vysion kassa (optioneel)",
-      "stripe": "Betaalterminal / Stripe",
-      "branding": "Eigen website in jouw huisstijl",
-      "multilingual": "Meertalig voor gasten",
-      "support": "E-mail & telefoon support",
-      "qrShop": "QR-code naar je shop",
-      "promoCodes": "Promoties & kortingscodes",
-      "noCommission": "Geen commissie per bestelling"
-    }
+    "cancelAnytime": "Maandelijks opzegbaar"
   },
   "mobileOrdering": {
     "imageAlt": "Bestellingen beheren op laptop thuis in de zetel",
